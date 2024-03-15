@@ -17,9 +17,10 @@ Aqui declaramos duas constantes que serão calculadas no bloco a seguir.
 console.log(`Números da operação são ${numero1} e ${numero2}`);
 console.log(`A soma dos números é ${numero1 + numero2}`);
 console.log(`A subtração dos números é ${numero1 - numero2}`);
-console.log(`A multiplicação dos números é ${numero1 * numero2}`);
+console.log(`A multiplicação dos números é ${numero1  numero2}`);
 console.log(`A divisão dos números é ${numero1 / numero2}`);
 console.log(`O resto da divisão dos números é ${numero1 % numero2}`);
+console.log(`O número1 elevado à potência do numero2 é ${numero1 ** numero2}`);
 ~~~
 
 Em cada uma das operações, gemos um operador aritmético:
@@ -29,6 +30,7 @@ Em cada uma das operações, gemos um operador aritmético:
 *   `*` -> multiplicação
 *   `/` -> divisão
 *   `%` -> resto da divisão
+*   `**` -> potenciação
 
 ## operadores-atribuicao.js
 ~~~js
@@ -60,3 +62,37 @@ Operadores de atribuíção:
 *   `%=` -> atribuição com resto da divisão.
 *   `++` -> atribuição com **incremento 1** (pode ser *pré* ou *pós* incrementado). Ex: `numero ++` (pós-incremento) ou `++ numero` (pré-incremento).
 *   `--` -> atribuição com **decremento 1** (pode ser *pré* ou *pós* incrementado). Ex: `numero --` (pós-decremento) ou `--numero` (pré-decremento).
+
+
+## operadores-comparacao.js
+
+Neste arquivo conheceos os operadores de comparação e a estrutura lógica de decisão **if-else**.
+
+~~~js
+Estrutra IF-ELSE
+
+if(condicao) { 
+    console.log('VERDADEIRO');
+} else {
+    console.log('FALSO');
+}
+~~~
+
+Usamos também as palavras `true` e `false` para "perguntar" se é verdadeiro ou falso
+
+   `true` -> palavra reservada para o valor verdadeiro
+   `false` -> palavra reservada para o valor falso
+
+Também aprendemos os valores da lógica booliana
+
+
+Operadores de comparação:
+
+*   `==` -> é igual
+*   `==` -> É estritamente igual (valor ou tipo)
+*   `!==` -> **NÃO** é estritamente igual (valor ou tipo)
+*   `!=` -> não é igual
+*   `>=` -> maior OU igual
+*   `<=` -> menor OU igual
+*   `>` -> maior que
+*   `<` -> menor que
