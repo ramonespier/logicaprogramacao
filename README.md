@@ -89,7 +89,7 @@ Também aprendemos os valores da lógica booliana
 Operadores de comparação:
 
 *   `==` -> é igual
-*   `==` -> É estritamente igual (valor ou tipo)
+*   `===` -> É estritamente igual (valor ou tipo)
 *   `!==` -> **NÃO** é estritamente igual (valor ou tipo)
 *   `!=` -> não é igual
 *   `>=` -> maior OU igual
@@ -130,3 +130,5 @@ Abaixo de 18,5	| Abaixo do peso
 30,0 - 34,9	| Obesidade grau I
 35,0 - 39,9	| Obesidade grau II
 Acima de 40,0 |	Obesidade grau III
+
+    
