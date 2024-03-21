@@ -14,32 +14,35 @@
 //35,0 - 39,9	Obesidade grau II
 //Acima de 40,0	Obesidade grau III
 
-function calculoIMC() {
+function calculoIMC(peso, altura) {
     
     const
-        inf = window.alert('O IMC é apenas uma medida geral e não leva em consideração a composição corporal (músculos x gordura). Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obesas. É importante consultar um médico ou nutricionista para uma avaliação individualizada.'),
-        altura = window.prompt('Informe sua altura'),
-        peso = window.prompt('Informe seu peso'),
+        inf = mensagem ='O IMC é apenas uma medida geral e não leva em consideração a composição corporal (músculos x gordura). Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obesas. É importante consultar um médico ou nutricionista para uma avaliação individualizada.',
+        
         imc = peso / (altura ** 2);
+
+    let mensagem;
     
     if (imc < 18.5) {
-        window.alert (`Abaixo do peso. -> ${imc.toFixed(1)}`);
+        mensagem = `Abaixo do peso. -> ${imc.toFixed(1)}`;
     
     } else if (imc <= 24.9) {
-        window.alert (`Peso normal. -> ${imc.toFixed(1)}`);
+        mensagem = `Peso normal. -> ${imc.toFixed(1)}`;
     
     } else if (imc <= 29.9) {
-        window.alert (`Sobrepeso. -> ${imc.toFixed(1)}`);
+        mensagem = `Sobrepeso. -> ${imc.toFixed(1)}`;
     
     } else if (imc <= 34.9) {
-        window.alert (`Obesidade grau I. -> ${imc.toFixed(1)}`);
+        mensagem = `Obesidade grau I. -> ${imc.toFixed(1)}`;
     
     } else if (imc <= 39.9) {
-        window.alert (`Obesidade grau II. -> ${imc.toFixed(1)}`);
+        mensagem = `Obesidade grau II. -> ${imc.toFixed(1)}`;
     
     } else {
-        window.alert (`Obesidade grau III. -> ${imc.toFixed(1)}`);
+        mensagem = `Obesidade grau III. -> ${imc.toFixed(1)}`;
     }
 
+    return mensagem;
 }
+
 
