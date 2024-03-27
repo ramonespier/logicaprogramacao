@@ -16,12 +16,13 @@
 
 function calculoIMC(peso, altura) {
     
+    
     const
-        inf = mensagem ='O IMC é apenas uma medida geral e não leva em consideração a composição corporal (músculos x gordura). Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obesas. É importante consultar um médico ou nutricionista para uma avaliação individualizada.',
-        
-        imc = peso / (altura ** 2);
-
+    imc = peso / (altura ** 2);
+    
     let mensagem;
+
+    mensagem ='O IMC é apenas uma medida geral e não leva em consideração a composição corporal (músculos x gordura). Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obesas. É importante consultar um médico ou nutricionista para uma avaliação individualizada.';
     
     if (imc < 18.5) {
         mensagem = `Abaixo do peso. -> ${imc.toFixed(1)}`;

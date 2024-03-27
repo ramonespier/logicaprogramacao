@@ -4,8 +4,13 @@
 
 function converteTemperatura() {
     
+    let
+    temperatura,
+    escalaAtual,
+    conversao;
+
     const
-    temperatura = parseFloat(window.prompt('Insira a temperatura atual')),
+    
     celsiusFahrenheit = (temperatura * 9/5) + 32,
     celsiusKelvin = temperatura + 273.15,
     fahrenheitCelsius = (temperatura - 32) * 5/9,
@@ -14,10 +19,6 @@ function converteTemperatura() {
     kelvinFahrenheit = temperatura * 9/5 - 459.67;
     
     if (!isNaN(temperatura)){
-    
-        const
-            escalaAtual = window.prompt('Escolha a escala atual (C), (F) ou (K).').toLowerCase(),
-            conversao = window.prompt('Para qual escala você quer converter? (C), (F) ou (K).').toLowerCase();
     
         if(escalaAtual == 'c' && conversao == 'f'){
         window.alert(`A temperatura convertida é ${celsiusFahrenheit.toFixed(1)}`)
