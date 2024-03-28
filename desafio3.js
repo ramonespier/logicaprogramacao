@@ -2,46 +2,82 @@
 
 //Entradas: valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão)
 
-function converteTemperatura() {
+function converteTemperatura(escalaAtual, conversao, temperatura) {
     
     let
-    temperatura,
-    escalaAtual,
-    conversao;
+    temperaturaConvertida, msgErro = 'Ok';
+
 
     const
     
-    celsiusFahrenheit = (temperatura * 9/5) + 32,
-    celsiusKelvin = temperatura + 273.15,
-    fahrenheitCelsius = (temperatura - 32) * 5/9,
-    fahrenheitKelvin = (temperatura + 459.67) * 5/9,
-    kelvinCelsius = temperatura - 273.15,
-    kelvinFahrenheit = temperatura * 9/5 - 459.67;
+    CF = (temperatura * 9/5) + 32,
+    CK = temperatura + 273.15,
+    FC = (temperatura - 32) * 5/9,
+    FK = (temperatura + 459.67) * 5/9,
+    KC = temperatura - 273.15,
+    KF = temperatura * 9/5 - 459.67;
     
     if (!isNaN(temperatura)){
+
+        escalaAtual = escalaAtual.toUpperCase();
+        conversao = conversao.toUpperCase();
+        
+            if(escalaAtual === 'C') {
+
+            if (conversao === 'F') {
+                temperaturaConvertida = CF;
+
+            } else if (conversao === 'K') {
+                temperaturaConvertida = CK;
+
+            } } else if (conversao === 'C') {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
     
-        if(escalaAtual == 'c' && conversao == 'f'){
-        window.alert(`A temperatura convertida é ${celsiusFahrenheit.toFixed(1)}`)
+            } else {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Essa escala não existe ou não está disponível neste programa.`;
+            }
+
+        } else if(escalaAtual === 'F') {
+
+            if (conversao === 'C') {
+                temperaturaConvertida = FC;
+
+            } else if (conversao === 'K') {
+                temperaturaConvertida = FK;
+
+            } else if (escalaConversao === 'F') {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
     
-        } else if (escalaAtual == 'c' && conversao == 'k'){
-        window.alert(`A temperatura convertida é ${celsiusKelvin.toFixed(1)}`)
+            } else {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Essa escala não existe ou não está disponível neste programa.`;
+            }
+        
+        } else if (conversao === 'K') {
+
+            if (conversao === 'C'){
+                temperaturaConvertida = KC;
+
+            } else if (conversao === 'F') {
+                temperaturaConvertida = KF;
+
+            } else if (escalaConversao === 'K') {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`;
     
-        } else if (escalaAtual == 'f' && conversao == 'c'){
-        window.alert(`A temperatura convertida é ${fahrenheitCelsius.toFixed(1)}`)
-    
-        } else if (escalaAtual == 'f' && conversao == 'k'){
-        window.alert(`A temperatura convertida é ${fahrenheitKelvin.toFixed(1)}`)
-    
-        } else if (escalaAtual == 'k' && conversao == 'c'){
-        window.alert(`A temperatura convertida é ${kelvinCelsius.toFixed(1)}`)
-    
-        } else if (escalaAtual == 'k' && conversao == 'f'){
-        window.alert(`A temperatura convertida é ${kelvinFahrenheit.toFixed(1)}`)
+            } else {
+                msgErro = `ERRO: Escala selecionada: ${conversao}. Essa escala não existe ou não está disponível neste programa.`;
+            }
+
         } else {
-        window.alert('A escala selecionada não existe, ou não está disponivel neste programa.') }
-    
-    } else {
-        window.alert(`O número digitado para conversão não é um número válido`)     
+            msgErro = `ERRO: Escala ATUAL selecionada: ${escalaAtual}. A escala ATUAL não existe ou não está disponível neste programa.`;
+
+
+    // retornando em JSON - JavaScript Object Notation
+    return {
+        temperatura: temperatura,
+        conversao: conversao,
+        escalaAtual: escalaAtual,
+        temperaturaConvertida: temperaturaConvertida,
+        msgErro: msgErro
+        };
     }
-    
 }
