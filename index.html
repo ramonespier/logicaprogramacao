@@ -58,6 +58,9 @@
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
     <script>
+
+        // desafio 2
+
         document.querySelector('#btIMC').addEventListener('click', function() {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;
@@ -69,15 +72,17 @@
          document.querySelector('#limparIMC').addEventListener('click', function() {
              document.querySelector('#resultadoIMC').innerHTML = "";
          })
+
+        //  desafio 3
          
         document.querySelector('#btConverte').addEventListener('click', function() {
             const temperatura = document.querySelector('#temperatura').value;
-            const escala = document.querySelector('#escalaAtual').value;
-            const escalaConvertida = document.querySelector('#conversao').value;
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const escalaConversao = document.querySelector('#conversao').value;
 
-            const conversaoTemperatura = converteTemperatura(temperatura, escala, escalaConvertida);
+            const conversaoTemperatura = converteTemperatura(escalaAtual, escalaConversao, temperatura);
 
-            document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.conversao}`;
+            document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.escalaConversao}`;
         })
 
          document.querySelector('#limparTemp').addEventListener('click', function() {

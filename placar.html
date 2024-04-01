@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Placar de um jogo de futebol</h1>
+    <h3>Placar:</h3>
+
+    <form action="" id="placarJogo">
+
+    <label for="time1">Corinthians:</label>
+    <input type="number" id="time1" min="0">
+    
+    <label for="time2">Palmeiras:</label>
+    <input type="number" id="time2" min="0">
+
+    <button type="button">Calcular</button>
+    <button type="reset">Limapar</button>
+
+    </form>
+
+    <div id="resultadoJogo"></div>
+
+    <script src="jogofutebol.js"></script>
+    <script>
+        const time1 = document.querySelector('#time1').value;
+        const time2 = document.querySelector('time2').value;
+
+        const placarDoJogo = placar(time1, time2);
+
+        document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo:
+
+    </script>
+</body>
+</html>
