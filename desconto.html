@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descontos</h1>
+    <h3>Selecione o que você é:</h3>
+
+    <form action="" id="descontoCliente">
+
+    <label for="cliente">Qual sua relação com a loja?</label>
+    <select id="cliente">
+        <option value="comum">Cliente</option>
+        <option value="funcionario">Funcionário</option>
+        <option value="vip">VIP</option>
+    </select>
+
+    <label for="valor">Valor</label>
+    <input type="number" id="valor">
+
+    <button type="button" id="btDesconto">Calcular</button>
+    <button type="reset" id="limpaDesconto">Limpar</button>
+
+    <div id="desconto"></div>
+
+    <script src="desconto.js"></script>
+    <script>
+        document.querySelector('#btDesconto').addEventListener('click', function() {
+            const cliente = document.querySelector('#comum').value;
+            const funcionario = document.querySelector('#funcionario').value;
+            const vip = document.querySelector('#vip').value;
+            const valor = document.querySelector('#valor').value;
+
+            const descontovalor = desconto(cliente, comum, funcionario, vip, valor);
+
+        document.querySelector('#desconto').innerHTML = `${descontovalor.mensagem}`
+
+        })
+
+        document.querySelector('#limpaDesconto').addEventListener('click', function(){
+            document.querySelector('#desconto').innerHTML = "";
+        })
+
+        return mensagem ?? mensagemErro;
+
+    </script>
+
+    
+</body>
+</html>
