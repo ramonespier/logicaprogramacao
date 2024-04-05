@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+
+:root{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+[data-tema="dark"]{
+    --planofundo: #031123;
+    --cor-secao: #051D3B; 
+    --cor-primaria-texto: aliceblue;
+    --cor-secundaria-texto: #353535;
+    --cor-fundo-tags: dimgray;
+    --cor-botao: maroon;
+    --degrade: linear-gradient(to bottom right, crimson, #353535);
+    --fundo-scrollbar-track: #353535;
+    --fundo-scrollbar-thumb: crimson;
+    --titulo: crimson;
+    --shadow: #506075;
+
+}
+
+[data-tema="light"] {
+    --planofundo: aliceblue;
+    --cor-primaria-texto: #353535;
+    --cor-fundo-tags: gray;
+    --cor-botao: #b3c0ff;
+    --degrade: linear-gradient(to bottom right, #3d85c6, 
+    #c4daed);
+    --fundo-scrollbar-thumb: #3d85c6;
+    --fundo-scrollbar-track: #c4daed;
+    --titulo: #3d85c6;
+    --shadow: green;
+
+}
+
+body {
+    color: var(--cor-primaria-texto);
+    background-color: var(--planofundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input{
+    display: flex;
+}
+
+#time1,
+#time2{
+    margin-left: 73px;
+    border: black;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+#ladoA,
+#ladoB,
+#ladoC{
+    margin-left: 8px;
+    margin-right: 16px;
+    border-radius: 8px;
+    border: black;
+    padding: 5px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+#btTriangulo:hover {
+    transform: scale(1.1);
+}
+
+#btJogo:hover {
+    transform: scale(1.1);
+}
+
+#limpaPlacar:hover {
+    transform: scale(1.1);
+}
+
+#limparTri:hover {
+    transform: scale(1.1);
+}
+
+#btTriangulo, #btJogo{
+    transition-duration: .4s;
+    border-radius: 8px;
+    border: none;
+    background-color: cyan;
+}
+
+#limparTri, #limpaPlacar{
+    border-radius: 8px;
+    transition-duration: .4s;
+    border: none;
+    background-color: red;
+}
+
+label{
+    font-family: "Comfortaa", sans-serif;
+}
+
+button{
+    width: 7rem;
+    height: 2rem;
+}
+
+section{
+    background-color: var(--cor-secao);
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px var(--shadow);
+    width: 550px;
+    align-items: center;
+}
+
+h1, h3 {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    width: auto;
+    padding: 2rem;
+    font-weight: 700;
+}
