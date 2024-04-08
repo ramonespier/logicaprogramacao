@@ -3,26 +3,21 @@
 // A saída do programa deve ser o valor total da compra após o processamento e a categoria do desconto aplicado, se houver.
 // Dica: para calcular um percentual de um número, faça a operação desconto = valor * percentualDesconto / 100
 
-function desconto (cliente, comum, funcionario, vip, valor) {
+function desconto (cliente) {
+
+    let valor = 100.00
  
-    let mensagem,
-        desconto;
+    if (cliente === `Comum`) {
+        mensagem = `O valor a ser pago não terá desconto, pagará ${valor}`;
 
-    if (cliente === funcionario) {
-        mensagem = `O valor a ser pago é de ${valor * 10/100}`;
-        desconto = 'Funcionário.'
-
-    } else if (cliente === vip) {
-        mensagem = `O valor a ser pago é de ${valor * 5/100}`
-        desconto = 'VIP.'
+    } else if (cliente === `Funcionário`) {
+        mensagem = `O cliente terá 10% de desconto, irá pagar ${valor - (valor *0.1)}`
 
     } else {
-        mensagem = `O valor a ser pago não tera desconto, ${comum}.`
-        desconto = 'Cliente comum.'
+        mensagem = `O cliente terá 5% de desconto, irá pagar ${valor - (valor *0.05)}`
     }
 
-    return {
-        mensagem: mensagem,
-        desconto: desconto
+    return{
+        mensagem: mensagem
     }
 }

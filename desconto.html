@@ -28,23 +28,20 @@
 
     <script src="desconto.js"></script>
     <script>
-        document.querySelector('#btDesconto').addEventListener('click', function() {
-            const cliente = document.querySelector('#comum').value;
-            const funcionario = document.querySelector('#funcionario').value;
-            const vip = document.querySelector('#vip').value;
-            const valor = document.querySelector('#valor').value;
+        document.querySelector('#btDesconto').addEventListener('click', () => {
 
-            const descontovalor = desconto(cliente, comum, funcionario, vip, valor);
+            const cliente = document.querySelector('#cliente').value;
 
-        document.querySelector('#desconto').innerHTML = `${descontovalor.mensagem}`
+            const resultado = desconto(cliente);
 
+            document.querySelector('#desconto').innerHTML = `${resultado.mensagem}`
         })
 
         document.querySelector('#limpaDesconto').addEventListener('click', function(){
             document.querySelector('#desconto').innerHTML = "";
         })
 
-        return mensagem ?? mensagemErro;
+        return mensagem;
 
     </script>
 
