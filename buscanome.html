@@ -1,63 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca de um nome</title>
-</head>
-<body>
+<html lang="pt-BR" data-tema="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Busca de um nome</title>
+    </head>
+    <body>
 
-    <form action="">
+        <header>
+    
+            <a href="index.html">Início</a>
+            <button type="button" id="btTrocaTema">Trocar Tema</button>
+            
+        </header>
 
-        <label for="nomeInclusao">Nome para incluir:</label>
-        <input type="text" id="nomeInclusao" required autofocus>
+    <section>
 
-        <button type="reset" id="btCadastrar">Cadastrar</button>
+        <h1>Buscando nomes</h1>
+        <h3>Escreva até 10 nomes e procure</h3>
+        
+        <form action="">
+            
+            <div class="input">
 
-        <button type="button" id="btMostrar">Mostrar</button>
-
-        <div id="resultado"></div>
+            <label for="nome">Nome para incluir →</label>
+            <input type="text" id="nome" required autofocus>
+            
+        </div>
+        
+        <div class="botoes">
+            
+            <button type="reset" id="btCadastrar">Cadastrar</button>
+            <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+            
+        </div>
 
     </form>
     
-    <script>
+    <div id="resultado"></div>
+    
+</section>
 
-        let nomes = []; //array vazio chamado "nomes"
+<script src="tema.js"></script>
+<script>
+    let nomes = []; //array vazio chamado "nomes"
+    
+        document.addEventListener('keydown', (evento) => {
 
-        document.querySelector('#btCadastrar').addEventListener('click', () => {
+            if (evento.key === 'Enter') {
 
-            if (nomes.length < 10) {
+                evento.preventDefault();
 
-                nomes.push(document.querySelector('#nomeInclusao').value);
-
-            } else {
-                
-                if (nomes.includes(document.querySelector('#nomeInclusao').value)) {
-
-                    console.log('ACHEI')
+                if (nomes.length < 10) {
+                    document.querySelector('#btCadastrar').click();
 
                 } else {
 
-                    console.log('NÃO ACHEI')
+                    document.querySelector('#btPesquisar').click();
                 }
-
             }
-
+        });
+        
+        
+        document.querySelector('#btCadastrar').addEventListener('click', () => {
+            
+            nomes.push(document.querySelector('#nome').value);
+            
+            // ao atingit 10 nomes...
+            if (nomes.length === 10) {
+                
+                // troque a label do input
+                document.querySelector('label[for="nome"]').innerHTML = 'Nome para pesquisar:';
+                
+                // oculte ao botão cadastrar
+                document.querySelector('#btCadastrar').classList.add('oculto');
+                
+                // desoculte do botão cadastrar
+                document.querySelector('#btPesquisar').classList.remove('oculto');
+                
+            }
         });
 
-        document.querySelector('#btMostrar').addEventListener('click', () => {
-
-            nomes.forEach((nome) => {
-                document.querySelector('#resultado').innerHTML += nome + '<br>';
-            })
+        document.querySelector('#btPesquisar').addEventListener('click', () => {
+            
+            const nomeBuscado = document.querySelector('#nome').value;
+            
+            if (nomes.includes(nomeBuscado)) {
+                
+                document.querySelector('#resultado').innerHTML = 'ACHEI';
+                
+            } else {
+                
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEI';
+                
+            }
+            
         });
-
         //TODO: 
         // 1. Ao clicar em cadastrar, limpar o input
         // 2. Limitar a 10 nomes
         // 3. Após o 10º nome, o campo permite buscar um nome no array
         // 4. Exbir se o nome foi encontrado
-
-    </script>
+        
+        </script>
 </body>
 </html>

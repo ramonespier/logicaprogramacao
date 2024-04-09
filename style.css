@@ -13,28 +13,31 @@
     --planofundo: #031123;
     --cor-secao: #051D3B; 
     --cor-primaria-texto: aliceblue;
+    --cor-primaria-botao: #353535;
+    --cor-botao: #ffffff;
     --cor-secundaria-texto: #353535;
     --cor-fundo-tags: dimgray;
-    --cor-botao: maroon;
     --degrade: linear-gradient(to bottom right, crimson, #353535);
     --fundo-scrollbar-track: #353535;
     --fundo-scrollbar-thumb: crimson;
-    --titulo: crimson;
+    --titulo: #e6e8eb;
     --shadow: #506075;
 
 }
 
 [data-tema="light"] {
-    --planofundo: aliceblue;
+    --planofundo: #f4cce3;
+    --cor-secao: #e47fba; 
     --cor-primaria-texto: #353535;
+    --cor-primaria-botao: #ffffff;
+    --cor-botao: #14000b;
     --cor-fundo-tags: gray;
-    --cor-botao: #b3c0ff;
     --degrade: linear-gradient(to bottom right, #3d85c6, 
     #c4daed);
     --fundo-scrollbar-thumb: #3d85c6;
     --fundo-scrollbar-track: #c4daed;
-    --titulo: #3d85c6;
-    --shadow: green;
+    --titulo: #280017;
+    --shadow: #2F2A2C;
 
 }
 
@@ -71,8 +74,8 @@ body {
 
 .botoes{
     display: flex;
-    justify-content: space-evenly;
     padding: 2rem;
+    justify-content: space-evenly;
 }
 
 #btTriangulo:hover {
@@ -91,11 +94,52 @@ body {
     transform: scale(1.1);
 }
 
-#btTriangulo, #btJogo{
+#btCadastrar:hover{
+    transform: scale(1.1);
+}
+
+#btPesquisar:hover{
+    transform: scale(1.1);
+}
+
+#btTrocaTema:hover{
+    transform: scale(1.1);
+}
+
+#btTrocaTema{
+    background-color: var(--cor-botao);
+    color: var(--cor-primaria-botao);
+    transition-duration: .4s;
+    border-radius: 8px;
+    border: none;
+    margin-top: 3rem;
+    box-shadow: var(--shadow);
+}
+
+#btTriangulo, #btJogo, #btCadastrar, #btPesquisar{
     transition-duration: .4s;
     border-radius: 8px;
     border: none;
     background-color: cyan;
+}
+
+a:hover{
+    transform: scale(1.1);
+}
+
+a{
+    font-family: "Comfortaa", sans-serif;
+    transition-duration: .4s;
+    background-color: yellow;
+    border: none;
+    text-decoration: none;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding-top: 15px;
+    margin-right: 10rem;
 }
 
 #limparTri, #limpaPlacar{
@@ -105,11 +149,21 @@ body {
     background-color: red;
 }
 
-label{
+label,
+#resultado,
+#resultadoJogo,
+#resultadoTriangulo{
     font-family: "Comfortaa", sans-serif;
+    margin-left: 6rem;
+    font-weight: 700;
+}
+
+.oculto{
+    display: none;
 }
 
 button{
+    font-family: "Comfortaa", sans-serif;
     width: 7rem;
     height: 2rem;
 }
@@ -124,6 +178,7 @@ section{
 }
 
 h1, h3 {
+    color: var(--titulo);
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
     width: auto;

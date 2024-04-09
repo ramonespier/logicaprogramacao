@@ -9,6 +9,13 @@
 </head>
 <body>
 
+    <header>
+    
+        <a href="index.html">Início</a>
+        <button id="btTrocaTema">Trocar Tema</button>
+        
+    </header>
+
     <section>
 
         <h1>Placar de um jogo de futebol</h1>
@@ -16,12 +23,10 @@
         
         <form action="" id="placarJogo">
            
-            <div class="placar">
+            <div class="input">
 
-                <label for="time1"></label>
                 <input type="number" id="time1" min="0" placeholder="Corinthians">
                 
-                <label for="time2"></label>
                 <input type="number" id="time2" min="0" placeholder="Palmeiras">
             
             </div>
@@ -39,6 +44,7 @@
         
     </section>
 
+        <script src="tema.js"></script>
         <script src="jogofutebol.js"></script>
         <script>
             document.querySelector('#btJogo').addEventListener('click', function() {
