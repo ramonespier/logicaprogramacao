@@ -80,58 +80,49 @@ body {
     justify-content: space-evenly;
 }
 
-#btTriangulo:hover {
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button{
+    font-family: "Comfortaa", sans-serif;
+    width: 7rem;
+    height: 2rem;
+}
+
+a:hover{
     transform: scale(1.1);
 }
 
-#btJogo:hover {
-    transform: scale(1.1);
-}
-
-#limpaPlacar:hover {
-    transform: scale(1.1);
-}
-
-#limparTri:hover {
-    transform: scale(1.1);
-}
-
-#limparIMC:hover {
-    transform: scale(1.1);
-}
-
-#limparTemp:hover {
-    transform: scale(1.1);
-}
-
-#btIMC:hover{
-    transform: scale(1.1);
-}
-
-#btConverte:hover{
-    transform: scale(1.1);
-}
-
-#btCadastrar:hover{
-    transform: scale(1.1);
-}
-
-#btPesquisar:hover{
-    transform: scale(1.1);
-}
-
-#btTrocaTema:hover{
-    transform: scale(1.1);
+a{
+    font-family: "Comfortaa", sans-serif;
+    transition-duration: .4s;
+    background-color: yellow;
+    border: none;
+    text-decoration: none;
+    width: 12rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 5px 4rem 5px 4rem;
+    margin: 1rem 10rem 0 5rem;
+    align-items: center;
 }
 
 #btTrocaTema{
     background-color: var(--cor-botao);
     color: var(--cor-primaria-botao);
+    box-shadow: var(--shadow);
     transition-duration: .4s;
     border-radius: 8px;
     border: none;
-    margin-top: 3rem;
-    box-shadow: var(--shadow);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #btTriangulo,
@@ -146,33 +137,6 @@ body {
     background-color: cyan;
 }
 
-input{
-    width: 47.5%;
-    line-height: 2.2;
-    border-radius: 8px;
-    border: 1px solid var(--borda-input);
-    padding-left: 8px;
-}
-
-a:hover{
-    transform: scale(1.1);
-}
-
-a{
-    font-family: "Comfortaa", sans-serif;
-    transition-duration: .4s;
-    background-color: yellow;
-    border: none;
-    text-decoration: none;
-    width: 7rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    border-radius: 16px;
-    padding: 5px 4rem 5px 4rem;
-    margin: 1rem 10rem 0 5rem;
-}
-
 #limparTri,
 #limpaPlacar,
 #limparIMC,
@@ -181,10 +145,6 @@ a{
     transition-duration: .4s;
     border: none;
     background-color: red;
-}
-
-label{
-    font-family: "Comfortaa", sans-serif;
 }
 
 #resultado,
@@ -197,23 +157,25 @@ label{
     font-weight: 700;
 }
 
+input{
+    width: 47.3%;
+    line-height: 2.2;
+    border-radius: 8px;
+    border: 1px solid var(--borda-input);
+    padding-left: 8px;
+}
+
+
+
+label{
+    font-family: "Comfortaa", sans-serif;
+}
+
+
 .oculto{
     display: none;
 }
 
-button{
-    font-family: "Comfortaa", sans-serif;
-    width: 7rem;
-    height: 2rem;
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-button:active{
-    box-shadow: inset 1px 1px 1px var(--shadow);
-}
 
 section{
     background-color: var(--cor-secao);
