@@ -22,6 +22,7 @@
     --fundo-scrollbar-thumb: crimson;
     --titulo: #e6e8eb;
     --shadow: #506075;
+    --borda-input: aliceblue;
 
 }
 
@@ -38,6 +39,7 @@
     --fundo-scrollbar-track: #c4daed;
     --titulo: #280017;
     --shadow: #2F2A2C;
+    --borda-input: black;
 
 }
 
@@ -94,6 +96,22 @@ body {
     transform: scale(1.1);
 }
 
+#limparIMC:hover {
+    transform: scale(1.1);
+}
+
+#limparTemp:hover {
+    transform: scale(1.1);
+}
+
+#btIMC:hover{
+    transform: scale(1.1);
+}
+
+#btConverte:hover{
+    transform: scale(1.1);
+}
+
 #btCadastrar:hover{
     transform: scale(1.1);
 }
@@ -116,11 +134,24 @@ body {
     box-shadow: var(--shadow);
 }
 
-#btTriangulo, #btJogo, #btCadastrar, #btPesquisar{
+#btTriangulo,
+#btJogo,
+#btCadastrar,
+#btPesquisar,
+#btConverte,
+#btIMC{
     transition-duration: .4s;
     border-radius: 8px;
     border: none;
     background-color: cyan;
+}
+
+input{
+    width: 47.5%;
+    line-height: 2.2;
+    border-radius: 8px;
+    border: 1px solid var(--borda-input);
+    padding-left: 8px;
 }
 
 a:hover{
@@ -137,22 +168,30 @@ a{
     height: 2rem;
     display: flex;
     justify-content: center;
-    border-radius: 8px;
-    padding-top: 15px;
-    margin-right: 10rem;
+    border-radius: 16px;
+    padding: 5px 4rem 5px 4rem;
+    margin: 1rem 10rem 0 5rem;
 }
 
-#limparTri, #limpaPlacar{
+#limparTri,
+#limpaPlacar,
+#limparIMC,
+#limparTemp{
     border-radius: 8px;
     transition-duration: .4s;
     border: none;
     background-color: red;
 }
 
-label,
+label{
+    font-family: "Comfortaa", sans-serif;
+}
+
 #resultado,
 #resultadoJogo,
-#resultadoTriangulo{
+#resultadoTriangulo,
+#resultadoIMC,
+#resultadoConversao{
     font-family: "Comfortaa", sans-serif;
     margin-left: 6rem;
     font-weight: 700;
@@ -168,6 +207,14 @@ button{
     height: 2rem;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    box-shadow: inset 1px 1px 1px var(--shadow);
+}
+
 section{
     background-color: var(--cor-secao);
     padding: 3%;
@@ -177,7 +224,11 @@ section{
     align-items: center;
 }
 
-h1, h3 {
+.secoes-principais{
+    margin: 1rem 0 1rem 0;
+}
+
+h1, h2, h3 {
     color: var(--titulo);
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
