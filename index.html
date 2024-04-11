@@ -1,93 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-tema="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora IMC</title>
+
+    <style>
+        .oculto {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
+
 
     <header>
 
-        <button type="button" id="btTrocaTema">Trocar Tema</button>
-        <h1>Programinhas</h1>
-        
+        <div class="principal">
+
+            <h1>Programinhas</h1>
+
+        </div>
+
+        <div class="troca-tema">
+
+            <button type="button" id="tema-claro" class="btTrocaTema"><img src="sol.png" alt="" width="40px"></button>
+
+            <button type="button" id="tema-escuro" class="oculto btTrocaTema"><img src="58f9fedb0ed2bdaf7c128331.png"
+                    alt="" width="40px"></button>
+
+        </div>
+
     </header>
+
 
     <nav>
 
         <section class="secoes-principais">
-            
+
             <h2>Calculadora IMC</h2>
-            
+
             <form action="" id="formIMC">
-                
+
                 <input type="number" id="peso" step="0.5" min="0" max="1000" placeholder="Peso">
-                
+
                 <input type="number" id="altura" step="0.01" min="0" max="3" placeholder="Altura">
 
                 <div class="botoes">
 
                     <button type="button" id="btIMC">Calcular IMC</button>
                     <button type="reset" id="limparIMC">Limpar</button>
-                    
+
                 </div>
 
             </form>
-            
+
             <div id="resultadoIMC"></div>
-            
+
         </section>
-        
+
         <section class="secoes-principais">
 
             <h2>Conversor de Temperatura</h2>
-            
+
             <form action="" id="formConversor">
-                
+
                 <input type="number" id="temperatura" placeholder="Temperatura">
-                
+
                 <label for="escalaAtual">De:</label>
                 <select id="escalaAtual" required>
                     <option value="C" selected>Celcius</option>
                     <option value="F">Fahrenheit</option>
                     <option value="K">Kelvin</option>
                 </select>
-                
+
                 <label for="conversao">Para:</label>
                 <select id="conversao" required>
                     <option value="C">Celcius</option>
                     <option value="F" selected>Fahrenheit</option>
                     <option value="K">Kelvin</option>
                 </select>
-                
-            <div class="botoes">
-                
-                <button type="button" id="btConverte">Converter</button>
-                <button type="reset" id="limparTemp">Limpar</button>
-                
-            </div>
+
+                <div class="botoes">
+
+                    <button type="button" id="btConverte">Converter</button>
+                    <button type="reset" id="limparTemp">Limpar</button>
+
+                </div>
 
             </form>
-            
+
             <div id="resultadoConversao"></div>
-            
+
         </section>
 
     </nav>
 
-        <nav>
-            <ul>
-                
-                <li><a href="placar.html">Placar de um jogo</a></li>
-                <li><a href="triangulo.html">Lados de um triângulo</a></li>
-                <li><a href="desconto.html">Desconto de cliente</a></li>
-                <li><a href="buscanome.html">Buscar nomes</a></li>
-                
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+
+            <li><a href="placar.html" class="troca-site">Placar de um jogo</a></li>
+            <li><a href="triangulo.html" class="troca-site">Lados de um triângulo</a></li>
+            <li><a href="desconto.html" class="troca-site">Desconto de cliente</a></li>
+            <li><a href="buscanome.html" class="troca-site">Buscar nomes</a></li>
+
+        </ul>
+    </nav>
 
     <script src="tema.js"></script>
     <script src="desafio2.js"></script>
@@ -96,21 +118,21 @@
 
         // desafio 2
 
-        document.querySelector('#btIMC').addEventListener('click', function() {
+        document.querySelector('#btIMC').addEventListener('click', function () {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;
             const imc = calculoIMC(peso, altura);
             console.log(imc);
             document.querySelector('#resultadoIMC').innerHTML = imc;
-        })
+        });
 
-         document.querySelector('#limparIMC').addEventListener('click', function() {
-             document.querySelector('#resultadoIMC').innerHTML = "";
-         })
+        document.querySelector('#limparIMC').addEventListener('click', function () {
+            document.querySelector('#resultadoIMC').innerHTML = "";
+        });
 
         //  desafio 3
-         
-        document.querySelector('#btConverte').addEventListener('click', function() {
+
+        document.querySelector('#btConverte').addEventListener('click', function () {
             const temperatura = document.querySelector('#temperatura').value;
             const escalaAtual = document.querySelector('#escalaAtual').value;
             const escalaConversao = document.querySelector('#conversao').value;
@@ -118,12 +140,33 @@
             const conversaoTemperatura = converteTemperatura(escalaAtual, escalaConversao, temperatura);
 
             document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.escalaConversao}`;
-        })
+        });
 
-         document.querySelector('#limparTemp').addEventListener('click', function() {
-             document.querySelector('#resultadoConversao').innerHTML = "";
-         })
+        document.querySelector('#limparTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoConversao').innerHTML = "";
+        });
+
+    </script>
+
+
+    <script>
+
+        document.querySelector('#tema-claro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.add('oculto');
+            document.querySelector('#tema-escuro').classList.remove('oculto');
+            
+
+        });
+
+        document.querySelector('#tema-escuro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.remove('oculto');
+            document.querySelector('#tema-escuro').classList.add('oculto');
+            
+        });
 
     </script>
 </body>
+
 </html>
