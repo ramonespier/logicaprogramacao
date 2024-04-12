@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,19 +12,22 @@
     <header>
         <div class="principal">
             
-            <a href="index.html" id="home">Início</a>
+            <a href="/html/index.html" id="home">Início</a>
 
         </div>
         
         <div class="troca-tema">
-            
-            <button type="button" id="btTrocaTema">Trocar Tema</button>
-            
+
+            <button type="button" id="tema-claro"><img src="/image/sol.png" alt="" width="40px"></button>
+
+            <button type="button" id="tema-escuro" class="oculto"><img src="/image/58f9fedb0ed2bdaf7c128331.png"
+                    alt="" width="40px"></button>
+
         </div>
     </header>
         
 
-    <section>
+    <section class="secao-triangulo">
 
         <h1>Classificação de Triângulos</h1>
         <h3>Insira o tamanho dos lados:</h3>
@@ -41,8 +44,6 @@
                 
             </div>
 
-            
-            
             <div class="botoes">
                 
                 <button type="button" id="btTriangulo">Calcular</button>
@@ -56,8 +57,8 @@
 
     </section>
 
-    <script src="tema.js"></script>
-    <script src="triangulo.js"></script>
+    <script src="/javascript/tema.js"></script>
+    <script src="/javascript/triangulo.js"></script>
     
     <script>
     
@@ -75,7 +76,26 @@
             document.querySelector('#resultadoTriangulo').innerHTML = "";
         })
         
-        </script>
+    </script>
+
+    <script>
+
+        document.querySelector('#tema-claro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.add('oculto');
+            document.querySelector('#tema-escuro').classList.remove('oculto');
+            
+
+        });
+
+        document.querySelector('#tema-escuro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.remove('oculto');
+            document.querySelector('#tema-escuro').classList.add('oculto');
+            
+        });
+
+    </script>
 
 </body>
 </html>

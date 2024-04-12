@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
         <title>Busca de um nome</title>
     </head>
     <body>
@@ -12,29 +12,31 @@
         <header>
             <div class="principal">
                 
-                <a href="index.html" id="home">Início</a>
+                <a href="/html/index.html" id="home">Início</a>
 
             </div>
 
             <div class="troca-tema">
 
-                <button type="button" id="btTrocaTema">Trocar Tema</button>
-                
+                <button type="button" id="tema-claro"><img src="/image/sol.png" alt="" width="40px"></button>
+    
+                <button type="button" id="tema-escuro" class="oculto"><img src="/image/58f9fedb0ed2bdaf7c128331.png"
+                        alt="" width="40px"></button>
+    
             </div>
         </header>
             
 
-    <section>
+    <section class="secao-nome">
 
         <h1>Buscando nomes</h1>
         <h3>Escreva até 10 nomes e procure</h3>
         
         <form action="">
             
-            <div class="input">
+            <div class="input-nome">
 
-            <label for="nome">Nome para incluir → </label>
-            <input type="text" id="nome" required autofocus>
+            <input type="text" id="nome" placeholder="Nome para incluir" autofocus>
             
         </div>
         
@@ -51,9 +53,9 @@
     
 </section>
 
-<script src="tema.js"></script>
-<script>
-    let nomes = []; //array vazio chamado "nomes"
+    <script src="/javascript/tema.js"></script>
+    <script>
+        let nomes = []; //array vazio chamado "nomes"
     
         document.addEventListener('keydown', (evento) => {
 
@@ -106,12 +108,25 @@
             }
             
         });
-        //TODO: 
-        // 1. Ao clicar em cadastrar, limpar o input
-        // 2. Limitar a 10 nomes
-        // 3. Após o 10º nome, o campo permite buscar um nome no array
-        // 4. Exbir se o nome foi encontrado
-        
-        </script>
+    </script>
+    
+    <script>
+
+        document.querySelector('#tema-claro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.add('oculto');
+            document.querySelector('#tema-escuro').classList.remove('oculto');
+            
+
+        });
+
+        document.querySelector('#tema-escuro').addEventListener('click', () => {
+
+            document.querySelector('#tema-claro').classList.remove('oculto');
+            document.querySelector('#tema-escuro').classList.add('oculto');
+            
+        });
+
+    </script>
 </body>
 </html>

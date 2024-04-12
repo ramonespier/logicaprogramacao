@@ -15,7 +15,7 @@ function converteTemperatura(escalaAtual, escalaConversao, temperatura) {
             if(escalaAtual === 'C') {
 
                 if (escalaConversao === 'F') {
-                temperaturaConvertida = (temperatura * 9/5) + 32.;
+                temperaturaConvertida = (temperatura * 9/5) + 32
 
                 } else if (escalaConversao === 'K') {
                 temperaturaConvertida = temperatura + 273.15;

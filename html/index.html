@@ -4,19 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Calculadora IMC</title>
 
-    <style>
-        .oculto {
-            display: none;
-        }
-    </style>
+    
 </head>
 
 <body>
-
 
     <header>
 
@@ -28,9 +23,9 @@
 
         <div class="troca-tema">
 
-            <button type="button" id="tema-claro" class="btTrocaTema"><img src="sol.png" alt="" width="40px"></button>
+            <button type="button" id="tema-claro"><img src="../image/sol.png" alt="" width="40px"></button>
 
-            <button type="button" id="tema-escuro" class="oculto btTrocaTema"><img src="58f9fedb0ed2bdaf7c128331.png"
+            <button type="button" id="tema-escuro" class="oculto"><img src="../image/58f9fedb0ed2bdaf7c128331.png"
                     alt="" width="40px"></button>
 
         </div>
@@ -46,9 +41,9 @@
 
             <form action="" id="formIMC">
 
-                <input type="number" id="peso" step="0.5" min="0" max="1000" placeholder="Peso">
+                <input type="number" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
 
-                <input type="number" id="altura" step="0.01" min="0" max="3" placeholder="Altura">
+                <input type="number" id="altura" class="secao-um" step="0.01"  min="0" max="3" placeholder="Altura">
 
                 <div class="botoes">
 
@@ -103,17 +98,17 @@
     <nav>
         <ul>
 
-            <li><a href="placar.html" class="troca-site">Placar de um jogo</a></li>
-            <li><a href="triangulo.html" class="troca-site">Lados de um triângulo</a></li>
-            <li><a href="desconto.html" class="troca-site">Desconto de cliente</a></li>
-            <li><a href="buscanome.html" class="troca-site">Buscar nomes</a></li>
+            <li><a href="../html/placar.html" class="troca-site">Placar de um jogo</a></li>
+            <li><a href="../html/triangulo.html" class="troca-site">Lados de um triângulo</a></li>
+            <li><a href="../html/desconto.html" class="troca-site">Desconto de cliente</a></li>
+            <li><a href="../html/buscanome.html" class="troca-site">Buscar nomes</a></li>
 
         </ul>
     </nav>
 
-    <script src="tema.js"></script>
-    <script src="desafio2.js"></script>
-    <script src="desafio3.js"></script>
+    <script src="/javascript/tema.js"></script>
+    <script src="/javascript/desafio2.js"></script>
+    <script src="/javascript/desafio3.js"></script>
     <script>
 
         // desafio 2
