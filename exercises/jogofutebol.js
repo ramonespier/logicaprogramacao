@@ -17,4 +17,20 @@ return {
     gol1: gol1,
     gol2: gol2
     }
-}
+};
+
+    document.querySelector('#btJogo').addEventListener('click', function() {
+        const time1 = document.querySelector('#time1').value;
+        const time2 = document.querySelector('#time2').value;
+    const gol1 = document.querySelector('#time1').value;
+    const gol2 = document.querySelector('#time2').value;
+
+    const placarDoJogo = placar(time1, time2, gol1, gol2);
+
+    document.querySelector('#resultadoJogo').innerHTML = `Placar do jogo: ${placarDoJogo.mensagem}`;
+
+    });
+
+    document.querySelector('#limpaPlacar').addEventListener('click', function(){
+    document.querySelector('#resultadoJogo').innerHTML = "";
+    });
