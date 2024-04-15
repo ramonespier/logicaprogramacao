@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
     <title>Document</title>
 </head>
 <body>
@@ -45,35 +44,15 @@
                 <input type="number" step="0.01" min="0.00" id="valor"><br>
             </div>
 
-    <button type="button" onclick="(compra)">Finalizar</button>
-    <button type="button" onclick="(limpar)">Limpar</button>
+    <button type="button" id="btDesconto">Finalizar</button>
+    <button type="reset" id="limpaDesconto">Limpar</button>
 
-    <p class="resultado"></p>
-    <p class="erro"></p>
+    <div id="resultadoDesconto"></div>
+    <div id="erro"></div>
 
     <a href="/html/index.html">Início</a>
 
-    <!-- <script src="/exercises/desconto.js"></script> -->
-    <script>
-
-    </script>
-
-    <!-- <script>
-        document.querySelector('#btDesconto').addEventListener('click', function(event) {
-            event.preventDefault();
-
-            escolha = document.getElementById('tipo-cliente').value;
-            calculo = compra(escolha);
-
-            document.getElementById('desconto').innerHTML = `${calculo}`
-        })
-
-        document.querySelector('#limpaDesconto').addEventListener('click', function(){
-            document.querySelector('#desconto').innerHTML = "";
-        })
-
-    </script> -->
-
-    
+    <script src="/exercises/desconto.js"></script>
+   
 </body>
 </html>
