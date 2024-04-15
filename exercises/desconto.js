@@ -6,10 +6,10 @@ function desconto (clientes) {
         resultado = valor;
 
     } else if (clientes === '2'){
-        resultado = valor - (valor * 0.05);
-
-    } else {
         resultado = valor - (valor * 0.1);
+        
+    } else {
+        resultado = valor - (valor * 0.05);
 
     }
     
