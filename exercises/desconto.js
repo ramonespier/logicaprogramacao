@@ -1,45 +1,29 @@
-function compra() {
+function desconto (clientes) {
 
-    let codigo = parseInt(document.getElementById("codigo").value);
-    let valor = parseFloat(document.getElementById("valor").value);
-    let resultado = valor;
-    
-    if (valor > 0) {
-        if (codigo === 1) {
-            resultado = valor;
-    
-            document.querySelector('p.resultado').innerHTML = `Valor a pagar R$` + resultado.toFixed(2)
-            document.querySelector('p.erro').innerHTML = "";
-    
-        } else if (codigo === 2) {
-        resultado -= (valor * 0.1);
-    
-        document.querySelector('p.resultado').innerHTML = 'Valor a pagar R$' + resultado.toFixed(2);
-        document.querySelector('p.erro').innerHTML = "";
-    
-        } else if (codigo === 3) {
-        resultado -= (valor * 0.05);
-    
-        document.querySelector("p.resultado").innerHTML = 'Valor a pagar R$' + resultado.toFixed(2);
-        document.querySelector('p.erro').innerHTML = "";
-    
-        } else {
-    
-        document.querySelector("p.erro").innerHTML = "Código inválido!";
-        document.querySelector("p.resultado").innerHTML = "";
-        }
-    
+    let valor = document.querySelector('#valor').value;
+
+    if (clientes === '1'){
+        resultado = valor;
+
+    } else if (clientes === '2'){
+        resultado = valor - (valor * 0.05);
+
     } else {
-    
-    document.querySelector("p.erro").innerHTML = "Digite um valor válido!";
-    document.querySelector("p.resultado").innerHTML = "";
-    
+        resultado = valor - (valor * 0.1);
+
     }
-};
     
-    function limpar() {
-    document.getElementById('valor').value = "";
-    document.getElementById('codigo').value = "";
-    document.querySelector('p.resultado').innerHTML = "";
-    document.querySelector('p.erro').innerHTML = "";
+    return resultado;
 };
+
+document.querySelector('#btDesconto').addEventListener('click', function (event) {
+    event.preventDefault();
+    escolha = document.getElementById('codigo').value;
+    calculo = desconto(escolha);
+    document.getElementById('resultadoDesconto').innerHTML = `${calculo.toFixed(2)}`
+
+});
+
+document.querySelector('#limpaDesconto').addEventListener('click', function(){
+    document.querySelector('#resultadoDesconto').innerHTML = "";
+});
