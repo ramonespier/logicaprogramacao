@@ -26,4 +26,6 @@ document.querySelector('#btDesconto').addEventListener('click', function (event)
 
 document.querySelector('#limpaDesconto').addEventListener('click', function(){
     document.querySelector('#resultadoDesconto').innerHTML = "";
+    document.querySelector('#codigo').innerHTML = "";
+    document.querySelector('#valor').innerHTML = "";
 });

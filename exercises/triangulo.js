@@ -16,3 +16,17 @@ function tipoTriangulo (ladoA, ladoB, ladoC) {
         mensagem: mensagem
     };
 };
+
+document.querySelector('#btTriangulo').addEventListener('click', function() {
+    const ladoA = document.querySelector('#ladoA').value;
+    const ladoB = document.querySelector('#ladoB').value;
+    const ladoC = document.querySelector('#ladoC').value;
+
+    const trianguloTipo = tipoTriangulo(ladoA, ladoB, ladoC)
+
+    document.querySelector('#resultadoTriangulo').innerHTML = `Tipo do triangulo: ${trianguloTipo.mensagem}`;
+});
+
+document.querySelector('#limparTri').addEventListener('click', function(){
+    document.querySelector('#resultadoTriangulo').innerHTML = "";
+});

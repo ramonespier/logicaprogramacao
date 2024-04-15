@@ -59,43 +59,6 @@
 
     <script src="/javascript/tema.js"></script>
     <script src="/exercises/triangulo.js"></script>
-    
-    <script>
-    
-    document.querySelector('#btTriangulo').addEventListener('click', function() {
-            const ladoA = document.querySelector('#ladoA').value;
-            const ladoB = document.querySelector('#ladoB').value;
-            const ladoC = document.querySelector('#ladoC').value;
-
-            const trianguloTipo = tipoTriangulo(ladoA, ladoB, ladoC)
-
-            document.querySelector('#resultadoTriangulo').innerHTML = `Tipo do triangulo: ${trianguloTipo.mensagem}`;
-        })
-
-        document.querySelector('#limparTri').addEventListener('click', function(){
-            document.querySelector('#resultadoTriangulo').innerHTML = "";
-        })
-        
-    </script>
-
-    <script>
-
-        document.querySelector('#tema-claro').addEventListener('click', () => {
-
-            document.querySelector('#tema-claro').classList.add('oculto');
-            document.querySelector('#tema-escuro').classList.remove('oculto');
-            
-
-        });
-
-        document.querySelector('#tema-escuro').addEventListener('click', () => {
-
-            document.querySelector('#tema-claro').classList.remove('oculto');
-            document.querySelector('#tema-escuro').classList.add('oculto');
-            
-        });
-
-    </script>
 
 </body>
 </html>
