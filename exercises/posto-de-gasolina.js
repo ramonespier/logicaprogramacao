@@ -17,6 +17,7 @@ function postoGasolina (litros, codigo) {
     
     } else {
         'Digite um código ou valor válido.'
+        
     }
 
     return valor;
