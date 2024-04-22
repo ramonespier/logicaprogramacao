@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/html/index.html">Início</a>
 
     <table>
         <tr>
@@ -31,7 +32,20 @@
         </tr>
     </table>
     
-    <a href="/html/index.html">Início</a>
+    <h3>Selecione o produto:</h3>
+    
+    <label for="produto">Produto:</label>
+    <select name="produto" id="produto">
+        <option value="1">Notebook R$4.000.00</option>
+        <option value="2">Gabinete R$350.00</option>
+        <option value="3">Processador R$650.00</option>
+    </select>
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" step="1" min="0">
+
+    <button type="button">Calcular</button>
+    <button type="reset">Limpar</button>
     
 </body>
 </html>
