@@ -33,19 +33,28 @@
     </table>
     
     <h3>Selecione o produto:</h3>
+ 
     
-    <label for="produto">Produto:</label>
-    <select name="produto" id="produto">
-        <option value="1">Notebook R$4.000.00</option>
-        <option value="2">Gabinete R$350.00</option>
-        <option value="3">Processador R$650.00</option>
-    </select>
+    <form action="">
 
-    <label for="quantidade">Quantidade:</label>
-    <input type="number" step="1" min="0">
+        <label for="produto">Produto:</label>
+        <select name="produto" id="produto">
+            <option value="1">Notebook R$4.000.00</option>
+            <option value="2">Gabinete R$350.00</option>
+            <option value="3">Processador R$650.00</option>
+        </select>
+        
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" step="1" min="0" id="quantidade">
+        
+        <button type="button" id="calc-produto">Calcular</button>
+        <button type="reset" id="limpa-produto">Limpar</button>
+        
+    </form>
 
-    <button type="button">Calcular</button>
-    <button type="reset">Limpar</button>
-    
+    <div id="resultado-produto"></div>
+  
+    <script src="/exercises/produtos-with-desconto.js"></script>
+
 </body>
 </html>
