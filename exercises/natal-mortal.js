@@ -12,8 +12,8 @@ function natalidadeMortal() {
         valor = natalMortal * 1000 / habitantes;
         
     } else {
+        if (natalMortal || habitantes === isNaN);
         valor = 'Insira um valor válido'
-
     }
     
     return valor;
