@@ -10,20 +10,20 @@ function produtosComDesconto (produto, quantidade) {
     let valor;
 
 
-    if(produto === '1' && quantidade > '0' && quantidade <= '3') {
+    if(produto === '1' && quantidade > '0' && quantidade <= '2') {
         valor = pro1;        
         
-    } else if (produto === '1' && quantidade <= '5') {
-        valor = pro1 - (pro1 * 0.02)
+    } else if (produto === '1' && quantidade >= '3' && quantidade <= '5') {
+        valor = pro1 - (pro1 * 0.02);
             
-    } else if (produto === '1' && quantidade <= '10') {
+    } else if (produto === '1' && quantidade >= '6' && quantidade < '11') {
          valor = pro1 - (pro1 * 0.03);
                 
     } else if (produto === '1' && quantidade > '10') {
         valor = pro1 - (pro1 * 0.05);  
                 
     } else if (produto === '2' && quantidade <= '2') {
-        valor = 350;
+        valor = pro2;
                     
     } else if (produto === '2' && quantidade <= '5') {
         valor = pro2 - (pro2 * 0.02);
@@ -35,7 +35,7 @@ function produtosComDesconto (produto, quantidade) {
         valor = pro2 - (pro2 * 0.05);                                                  
 
     } else if (produto === '3' && quantidade <= '2') {
-        valor = 650;
+        valor = pro3;
                 
     } else if (produto === '3' && quantidade <= '5') {
         valor = pro3 - (pro3 * 0.02);
@@ -51,11 +51,8 @@ function produtosComDesconto (produto, quantidade) {
 
     }
 
-    return {
-        valor: valor,
-        produto: produto,
-        quantidade: quantidade
-    }  
+    return valor;
+    
 } 
     // console.log(produtosComDesconto(produto, quantidade));
 
