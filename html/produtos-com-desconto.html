@@ -1,59 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-tema="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
     <a href="/html/index.html">Início</a>
 
-    <table>
-        <tr>
-
-            <th>Quantidade</th>
-            <th>Desconto</th>
+    <main class="tabela">
+       
+        <table>
+            <tr>
+                
+                <th>Quantidade</th>
+                <th>Desconto</th>
+                
+            </tr>
             
-        </tr>
-
-        <tr>
-            <td>3 a 5</td>
-            <td>2%</td>
-        </tr>
-
-        <tr>
-            <td>6 a 10</td>
-            <td>3%</td>
-        </tr>
-
-        <tr>
-            <td>Mais que 10</td>
-            <td>5%</td>
-        </tr>
-    </table>
-    
-    <h3>Selecione o produto:</h3>
- 
-    
-    <form action="">
-
-        <label for="produto">Produto:</label>
-        <select name="produto" id="produto">
-            <option value="1">Notebook R$4.000.00</option>
-            <option value="2">Gabinete R$350.00</option>
-            <option value="3">Processador R$650.00</option>
-        </select>
+            <tr>
+                <td>3 a 5</td>
+                <td>2%</td>
+            </tr>
+            
+            <tr>
+                <td>6 a 10</td>
+                <td>3%</td>
+            </tr>
+            
+            <tr>
+                <td>Mais que 10</td>
+                <td>5%</td>
+            </tr>
+        </table>
         
-        <label for="quantidade">Quantidade:</label>
-        <input type="number" step="1" min="0" id="quantidade">
-        
-        <button type="button" id="calc-produto">Calcular</button>
-        <button type="reset" id="limpa-produto">Limpar</button>
-        
-    </form>
+    </main>
 
-    <div id="resultado-produto"></div>
-  
+    <section class="desc-secao">
+
+        <h3>Selecione o produto:</h3>
+        
+        
+        <form action="">
+            
+            <label for="produto">Produto:</label>
+            <input type="number" id="produto">
+            
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" step="1" min="0" id="quantidade">
+            
+            <button type="button" id="calc-produto">Calcular</button>
+            <button type="reset" id="limpa-produto">Limpar</button>
+            
+        </form>
+        
+        <div id="resultado-produto"></div>
+        
+    </section>
+
     <script src="/exercises/produtos-with-desconto.js"></script>
 
 </body>

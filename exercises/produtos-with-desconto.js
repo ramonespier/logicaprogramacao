@@ -1,69 +1,73 @@
-        
-const produto = document.querySelector('#produto').value;
-const quantidade = document.querySelector('#quantidade').value;
-
-function produtosComDesconto (produto, quantidade) {
-
-    const pro1 = quantidade * 4000;
-    const pro2 = quantidade * 350;
-    const pro3 = quantidade * 650;
-    let valor;
-
-
-    if(produto === '1' && quantidade > '0' && quantidade <= '2') {
-        valor = pro1;        
-        
-    } else if (produto === '1' && quantidade >= '3' && quantidade <= '5') {
-        valor = pro1 - (pro1 * 0.02);
-            
-    } else if (produto === '1' && quantidade >= '6' && quantidade < '11') {
-         valor = pro1 - (pro1 * 0.03);
-                
-    } else if (produto === '1' && quantidade > '10') {
-        valor = pro1 - (pro1 * 0.05);  
-                
-    } else if (produto === '2' && quantidade <= '2') {
-        valor = pro2;
-                    
-    } else if (produto === '2' && quantidade <= '5') {
-        valor = pro2 - (pro2 * 0.02);
-                    
-    } else if (produto === '2' && quantidade <= '10') {
-        valor = pro2 - (pro2 * 0.03);
-                    
-    } else  if (produto === '2' && quantidade >= '11') {
-        valor = pro2 - (pro2 * 0.05);                                                  
-
-    } else if (produto === '3' && quantidade <= '2') {
-        valor = pro3;
-                
-    } else if (produto === '3' && quantidade <= '5') {
-        valor = pro3 - (pro3 * 0.02);
-                    
-    } else if (produto === '3' && quantidade <= '10') {
-        valor = pro3 - (pro3 * 0.03);
-                    
-    } else  if (produto === '3' && quantidade >= '11') {
-        valor = pro3 - (pro3 * 0.05);  
-    
-    } else {
-        valor = 'ERRO: Insira um carácter válido.'
-
+    const produtos = [{    
+        codigo: 1,
+        preco: 4.50,
+        descricao: "Trento"
+    },
+    {
+        codigo: 2,
+        preco: 9.00,
+        descricao: "Cheetos grande"
     }
+];
 
-    return valor;
+    function calculaDesconto(produto, quantidade) {
+
+        let preco;
+        let desconto;
+        let descricao;
+        let valorFinal;
+
+        //percorre o vetor de produtos para pesquisa
+        
+        for(let i = 0; i < produtos.length; i++) {
+
+            // se o codigo for igual ao procurado, obtem o preco
+            if(produtos[i].codigo === produto) {
+
+                preco = produtos[i].preco;
+                descricao = produtos[i].descricao;
+            }
+        }
+            // atribui o desconto com base na quantidade comprada
+
+            if (quantidade >= 3 && quantidade <= 5 ) {
+
+                 desconto = 0.02;
+
+            } else if (quantidade >= 6 && quantidade <= 10) {
+
+                desconto = 0.03;
+
+            } else if (quantidade > 10) {
+                
+                desconto = 0.05;
+
+            } else {
+                
+                desconto = 0;
+
+            }
+
+            valorFinal = (preco * quantidade) - (preco * quantidade * desconto);
+
+            return {
+                codigo: produto,
+                preco: preco,
+                descricao: descricao,
+                valorFinal: valorFinal
+        };
+    };
     
-} 
-    // console.log(produtosComDesconto(produto, quantidade));
 
     document.querySelector('#calc-produto').addEventListener('click', () => {
-        const produto = document.querySelector('#produto').value; 
-        const quantidade = document.querySelector('#quantidade').value;
-        
-        const produtoDesconto = produtosComDesconto (produto, quantidade)
 
-        document.querySelector('#resultado-produto').innerHTML = produtoDesconto
-    });
+        const produto = Number(document.querySelector('#produto').value);
+        const quantidade = Number(document.querySelector('#quantidade').value);
+
+        const codProduto = calculaDesconto(produto, quantidade);
+
+        document.querySelector('#resultado-produto').innerHTML = 'Valor a ser pago: R$' + codProduto.valorFinal.toFixed(2);
+    })
 
     document.querySelector('#limpa-produto').addEventListener('click', function(){
         document.querySelector('#resultado-produto').innerHTML = "";
