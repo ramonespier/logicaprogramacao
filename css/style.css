@@ -43,3 +43,33 @@
 
 }
 
+h1, h2, h3, h4, h5, h6, p, label{
+    color: var(--cor-primaria-texto);
+}
+
+body {
+    margin: 1rem;
+    background-color: var(--planofundo);
+}
+
+.secoes-principais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-secao);
+    box-shadow: 2px 2px 2px var(--shadow);
+    padding: 2rem;
+    margin: 1rem;
+    width: 500px;
+    height: 200px;
+}
+
+.secao-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.monetario::before {
+    content: 'R$ ';
+
+}

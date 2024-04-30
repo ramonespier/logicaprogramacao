@@ -13,7 +13,7 @@
 
 <body>
 
-    <header>
+    <header class="cabeçalho">
 
         <div class="principal">
 
@@ -33,13 +33,13 @@
     </header>
 
 
-    <nav>
+    <main class="secao-flex">
 
         <section class="secoes-principais">
 
             <h2>Calculadora IMC</h2>
 
-            <form action="" id="formIMC">
+            <form action="">
 
                 <input type="number" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
 
@@ -48,7 +48,7 @@
                 <div class="botoes">
 
                     <button type="button" id="btIMC">Calcular IMC</button>
-                    <button type="reset" id="limparIMC">Limpar</button>
+                    <button type="reset" id="limpar">Limpar</button>
 
                 </div>
 
@@ -62,7 +62,7 @@
 
             <h2>Conversor de Temperatura</h2>
 
-            <form action="" id="formConversor">
+            <form action="">
 
                 <input type="number" id="temperatura" placeholder="Temperatura">
 
@@ -83,7 +83,7 @@
                 <div class="botoes">
 
                     <button type="button" id="btConverte">Converter</button>
-                    <button type="reset" id="limparTemp">Limpar</button>
+                    <button type="reset" id="limpar">Limpar</button>
 
                 </div>
 
@@ -93,7 +93,7 @@
 
         </section>
 
-    </nav>
+    </main >
 
     <nav>
         <ul>
@@ -124,7 +124,7 @@
             document.querySelector('#resultadoIMC').innerHTML = imc;
         });
 
-        document.querySelector('#limparIMC').addEventListener('click', function () {
+        document.querySelector('#limpar').addEventListener('click', function () {
             document.querySelector('#resultadoIMC').innerHTML = "";
         });
 
@@ -140,7 +140,7 @@
             document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.escalaConversao}`;
         });
 
-        document.querySelector('#limparTemp').addEventListener('click', function () {
+        document.querySelector('#limpar').addEventListener('click', function () {
             document.querySelector('#resultadoConversao').innerHTML = "";
         });
 
