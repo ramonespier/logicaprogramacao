@@ -66,7 +66,15 @@
 
         const codProduto = calculaDesconto(produto, quantidade);
 
-        document.querySelector('#resultado-produto').innerHTML = 'Valor a ser pago: R$' + codProduto.valorFinal.toFixed(2);
+        const pDescricao = document.createElement('p');
+        pDescricao.innerHTML = codProduto.descricao;
+        pDescricao.setAttribute('data-produto', codProduto.codigo);
+
+        const pValorFinal = document.createElement('p');
+        pValorFinal.innerHTML = codProduto.valorFinal.toFixed(2);
+        pValorFinal.classList.add('monetario');
+
+        document.querySelector('#resultado-produto').append(pDescricao, pValorFinal);
     })
 
     document.querySelector('#limpa-produto').addEventListener('click', function(){
