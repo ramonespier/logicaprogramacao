@@ -8,41 +8,36 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <header>
 
-        <div class="principal">
-            
-            <a href="/html/index.html" id="home">Início</a>
-
-        </div>
-
+        
         <div class="troca-tema">
-
+            
             <button type="button" id="tema-claro"><img src="/image/sol.png" alt="" width="40px"></button>
-
+            
             <button type="button" id="tema-escuro" class="oculto"><img src="/image/58f9fedb0ed2bdaf7c128331.png"
-                    alt="" width="40px"></button>
-
-        </div>
-            
-    </header>
-        
-
-    <section>
-
-        <h1>Placar de um jogo de futebol</h1>
-        <h3>Placar:</h3>
-        
-        <form action="" id="placarJogo">
-           
-            <div class="input">
-
-                <input type="number" id="time1" min="0" placeholder="Corinthians">
+                alt="" width="40px"></button>
                 
-                <input type="number" id="time2" min="0" placeholder="Palmeiras">
-            
             </div>
+            
+        </header>
+        
+        
+        <section>
+            
+            <h1>Placar de um jogo de futebol</h1>
+            <h3>Placar:</h3>
+            
+            <form action="" id="placarJogo">
+                
+                <div class="input">
+                    
+                    <input type="number" id="time1" min="0" placeholder="Corinthians">
+                    
+                    <input type="number" id="time2" min="0" placeholder="Palmeiras">
+                    
+                </div>
                 
                 <div class="botoes">
 
@@ -50,14 +45,15 @@
                 <button type="reset" id="limpaPlacar">Limpar</button>
                 
             </div>
-
+            
         </form>
         
             <div id="resultadoJogo"></div>
-        
-    </section>
+            
+        </section>
 
+        <script src="/javascript/navbar.js"></script>
         <script src="/javascript/tema.js"></script>
         <script src="/exercises/jogofutebol.js"></script>
-</body>
-</html>
+    </body>
+    </html>

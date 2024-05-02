@@ -44,6 +44,18 @@ function calculoIMC(peso, altura) {
     }
 
     return mensagem;
-}
+};
+
+document.querySelector('#btIMC').addEventListener('click', function () {
+    const peso = document.querySelector('#peso').value;
+    const altura = document.querySelector('#altura').value;
+    const imc = calculoIMC(peso, altura);
+    console.log(imc);
+    document.querySelector('#resultadoIMC').innerHTML = imc;
+});
+
+document.querySelector('#limpar').addEventListener('click', function () {
+    document.querySelector('#resultadoIMC').innerHTML = "";
+});
 
 

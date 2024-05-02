@@ -9,6 +9,8 @@
     scroll-behavior: smooth;
 }
 
+/* VARIAVEIS */
+
 [data-tema="dark"]{
     --planofundo: #031123;
     --cor-secao: #051D3B; 
@@ -41,16 +43,20 @@
     --shadow: #2F2A2C;
     --borda-input: black;
 
-}
+} 
+
+/* FONTES */
 
 h1, h2, h3, h4, h5, h6, p, label{
     color: var(--cor-primaria-texto);
 }
 
 body {
-    margin: 1rem;
+    min-height: 100vh;
     background-color: var(--planofundo);
 }
+
+/* SEÇÕES */
 
 .secoes-principais {
     display: flex;
@@ -62,6 +68,7 @@ body {
     margin: 1rem;
     width: 500px;
     height: 200px;
+    border-radius: 16px;
 }
 
 .secao-flex {
@@ -72,4 +79,10 @@ body {
 .monetario::before {
     content: 'R$ ';
 
+}
+
+/* BOTÃO TEMA */
+
+.oculto {
+    display: none;
 }

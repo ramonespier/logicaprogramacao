@@ -72,4 +72,18 @@ function converteTemperatura(escalaAtual, escalaConversao, temperatura) {
         temperaturaConvertida: temperaturaConvertida,
         msgErro: msgErro
     };
-}
+};
+
+document.querySelector('#btConverte').addEventListener('click', function () {
+    const temperatura = document.querySelector('#temperatura').value;
+    const escalaAtual = document.querySelector('#escalaAtual').value;
+    const escalaConversao = document.querySelector('#conversao').value;
+
+    const conversaoTemperatura = converteTemperatura(escalaAtual, escalaConversao, temperatura);
+
+    document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.escalaConversao}`;
+});
+
+document.querySelector('#limpar').addEventListener('click', function () {
+    document.querySelector('#resultadoConversao').innerHTML = "";
+});

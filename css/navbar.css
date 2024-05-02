@@ -1,0 +1,156 @@
+[data-tema="dark"]{
+    --planofundo: #031123;
+    --cor-secao: #051D3B; 
+    --cor-primaria-botao: #353535;
+    --cor-botao: #14000b;
+    --cor-botao: #454865;
+    --cor-secundaria-texto: #353535;
+    --cor-fundo-tags: dimgray;
+    --degrade: linear-gradient(to bottom right, crimson, #353535);
+    --fundo-scrollbar-track: #353535;
+    --fundo-scrollbar-thumb: crimson;
+    --titulo: #e6e8eb;
+    --shadow: #506075;
+    --borda-input: aliceblue;
+    
+}
+
+[data-tema="light"] {
+    --planofundo: #c4d2e7;
+    --cor-secao: #6389c1; 
+    --cor-primaria-texto: #353535;
+    --cor-primaria-botao: #ffffff;
+    --cor-primaria-texto: aliceblue;
+    --cor-fundo-tags: gray;
+    --degrade: linear-gradient(to bottom right, #3d85c6, 
+    #c4daed);
+    --fundo-scrollbar-thumb: #3d85c6;
+    --fundo-scrollbar-track: #c4daed;
+    --titulo: #280017;
+    --shadow: #2F2A2C;
+    --borda-input: black;
+
+}
+/* LOGO DO MENU */
+
+.logo span {
+    color: aliceblue;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-inline-start: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.logo-menu {
+    display: flex;
+    background-color: var(--cor-secao);
+    height: 65px;
+    justify-content: space-between;
+}
+
+/* MENU */
+
+.menu-navegacao {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    background-color: var(--planofundo);
+}
+
+.logo-menu ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin-inline-end: 10px;
+}
+
+.menu-navegacao h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo-menu a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: var(--cor-primaria-texto);
+    background-color: var(--cor-botao);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    transition-duration: 350ms;
+    box-shadow: .5px .5px 4px var(--shadow);
+    cursor: pointer;
+}
+
+.logo-menu a:hover {
+    transform: scale(1.1);
+    background-color: #28343c;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* Farofa de pão */
+
+.breadcrumbs{
+    height: 50px;
+}
+
+.breadcrumbs>ul {
+    height: 100%;
+    display: flex;
+    margin-inline-start: 1.5rem;
+}
+
+.breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.breadcrumbs li:not(:last-child)::after{
+    content: "→";
+    color: aliceblue;
+}
+
+.breadcrumbs li:not(:last-child)>a {
+    color: aliceblue;
+}
+
+.breadcrumbs li:last-child>a {
+    background-color: #2a165d;
+    color: aliceblue; 
+    padding: 8px; 
+    border-radius: 8px;
+    margin-inline-start: 8px;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+.breadcrumbs a {
+    display: inline-flex;
+    align-items: center;
+    /* height: 100%; */
+    padding: 0 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: aliceblue;
+}
