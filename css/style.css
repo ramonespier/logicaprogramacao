@@ -47,7 +47,9 @@
 
 /* FONTES */
 
-h1, h2, h3, h4, h5, h6, p, label{
+h1, h2, h3, h4, h5, h6, p, label,
+ .resultadoConversao,
+  .resultadoIMC{
     color: var(--cor-primaria-texto);
 }
 
@@ -59,14 +61,15 @@ body {
 /* SEÇÕES */
 
 .secoes-principais {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--cor-secao);
     box-shadow: 2px 2px 2px var(--shadow);
     padding: 2rem;
     margin: 1rem;
-    width: 500px;
+    width: 600px;
     height: 200px;
     border-radius: 16px;
 }
@@ -85,4 +88,25 @@ body {
 
 .oculto {
     display: none;
+}
+
+/* BOTAO CALCULO */
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acao-positiva {
+    background-color: rgb(0, 255, 0);
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.acao-negativa {
+    background-color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
 }
