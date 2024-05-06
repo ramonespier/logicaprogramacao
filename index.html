@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/responsividade.css">
+    <script src="/javascript/estilos.js"></script>
+    
     <title>Programas</title>
    
 </head>
@@ -60,9 +63,9 @@
             
             <form action="">
                 
-                <input type="number" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
+                <input type="text" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
                 
-                <input type="number" id="altura" class="secao-um" step="0.01"  min="0" max="3" placeholder="Altura">
+                <input type="text" id="altura" class="secao-um" step="0.01"  min="0" max="3" placeholder="Altura">
                 
                 <div class="botoes">
                     
@@ -73,7 +76,9 @@
                 
             </form>
 
-            <div id="resultadoIMC"></div>
+            <div class="resultado">
+                <div id="resultadoIMC"></div>
+            </div>
             
         </section>
         
@@ -83,21 +88,23 @@
             
             <form action="">
                 
-                <input type="number" id="temperatura" placeholder="Temperatura">
+                <input type="text" id="temperatura" placeholder="Temperatura">
                 
-                <label for="escalaAtual">De:</label>
-                <select id="escalaAtual" required>
+                <label for="escalaConvertida">De:</label>
+                <input list="escalas" id="escalaConvertida">
+                <datalist id="escalas" class="datalist">
                     <option value="C" selected>Celcius</option>
                     <option value="F">Fahrenheit</option>
                     <option value="K">Kelvin</option>
-                </select>
+                </datalist>
                 
-                <label for="conversao">Para:</label>
-                <select id="conversao" required>
+                <label for="conversaoConvertida">Para:</label>
+                <input list="conversao" id="conversaoConvertida">
+                <datalist id="conversao" class="datalist">
                     <option value="C">Celcius</option>
                     <option value="F" selected>Fahrenheit</option>
-                    <option value="K">Kelvin</option>
-                </select>
+                    <option value="K">Kelvin</option>                    
+                </datalist>
                 
                 <div class="botoes">
                     
@@ -107,8 +114,10 @@
                 </div>
 
             </form>
-            
-            <div id="resultadoConversao"></div>
+
+            <div class="resultado">
+                <div id="resultadoConversao"></div>
+            </div>
             
         </section>
         

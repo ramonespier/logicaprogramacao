@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 *{
     scroll-behavior: smooth;
@@ -24,7 +25,7 @@
     --fundo-scrollbar-thumb: crimson;
     --titulo: #e6e8eb;
     --shadow: #506075;
-    --borda-input: aliceblue;
+    --borda-input: dimgray;
 
 }
 
@@ -47,10 +48,12 @@
 
 /* FONTES */
 
-h1, h2, h3, h4, h5, h6, p, label,
- .resultadoConversao,
-  .resultadoIMC{
+h1, h2, h3, h4, h5, h6, p, label{
     color: var(--cor-primaria-texto);
+}
+
+input, button {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
@@ -61,6 +64,7 @@ body {
 /* SEÇÕES */
 
 .secoes-principais {
+    font-family: 'Josefin Sans', sans-serif;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-around;
@@ -79,6 +83,10 @@ body {
     justify-content: center;
 }
 
+.resultado{
+    color: aliceblue;
+}
+
 .monetario::before {
     content: 'R$ ';
 
@@ -95,6 +103,7 @@ body {
 .botoes {
     display: flex;
     justify-content: space-between;
+    margin: 1rem;
 }
 
 .acao-positiva {
@@ -102,6 +111,11 @@ body {
     border: none;
     border-radius: 12px;
     padding: 15px;
+    transition: .4s;
+}
+
+.acao-positiva:hover{
+    transform: scale(1.1);
 }
 
 .acao-negativa {
@@ -109,4 +123,24 @@ body {
     border: none;
     border-radius: 12px;
     padding: 15px;
+    transition: .4s;
+}
+
+.acao-negativa:hover{
+    transform: scale(1.1);
+}
+
+/* INPUTS */
+.secao-um, #temperatura {
+    border-radius: 16px;
+    border: none;
+    padding: 8px;   
+}
+
+#escalaConvertida,
+#conversaoConvertida {
+    border-radius: 16px;
+    border: var(--borda-input);
+    padding: 8px;
+    width: 5rem;
 }
