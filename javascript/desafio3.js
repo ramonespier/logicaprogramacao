@@ -84,6 +84,6 @@ document.querySelector('#btConverte').addEventListener('click', function () {
     document.querySelector('#resultadoConversao').innerHTML = `Temperatura convertida: ${conversaoTemperatura.temperaturaConvertida + conversaoTemperatura.escalaConversao}`;
 });
 
-document.querySelector('#limpar').addEventListener('click', function () {
+document.querySelector('#limparConv').addEventListener('click', function () {
     document.querySelector('#resultadoConversao').innerHTML = "";
 });
