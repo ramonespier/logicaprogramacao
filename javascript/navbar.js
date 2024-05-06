@@ -1,40 +1,67 @@
-const aHome = document.createElement('a');
-aHome.setAttribute('href', '../html/index.html');
-aHome.innerHTML = 'Início';
+const ancoras = [
+    {'url': 'index.html', 'texto': 'Início'},
+    {'url': '/html/triangulo.html', 'texto': 'Exerc. 1'},
+    {'url': '/html/desconto.html', 'texto': 'Exerc. 2'},
+    {'url': '/html/placar.html', 'texto': 'Exerc. 3'},
+    {'url': '/html/buscanome.html', 'texto': 'Exerc. 4'},
+    {'url': '/html/posto-de-gasolina.html', 'texto': 'Exerc. 5'},
+    {'url': '/html/produtos-com-desconto.html', 'texto': 'Exerc. 6'},
+    {'url': '/html/natal-mortal.html', 'texto': 'Exerc. 7'}
+];
 
-const liHome = document.createElement('li');
-liHome.appendChild(aHome);
+function criaAncora(url, texto) {
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto;
 
-//Ancora exercício 1
-const aExercicio1 = document.createElement('a');
-aExercicio1.setAttribute('href', '../html/index.html');
-aExercicio1.innerHTML = 'Início';
+    return ancora;
+};
 
-const liExercicio1 = document.createElement('li');
-liExercicio1.appendChild(aExercicio1);
+function criaLi(ancora) {
+    const li = document.createElement('li');
+    li.appendChild(ancora);
 
-const ulNav = document.createElement('ul');
-ulNav.appendChild(aHome, liExercicio1);
+    return li;
+};
+
+function criaUlNav(ancoras) {
+    const ul = document.createElement('ul');
+
+    ancoras.forEach(ancora => {
+        const a = criaAncora(ancora.url, ancora.texto);
+        const li = criaLi(a);
+        ul.appendChild(li);
+
+    });
+
+    return ul;
+}
 
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
-nav.appendChild(ulNav);
+nav.appendChild(criaUlNav(ancoras));
+
+const spanLogo = document.createElement('span');
+spanLogo.innerHTML = 'Desafios e Exercícios';
+
+const divLogo = document.createElement('div');
+divLogo.classList.add('logo');
+divLogo.appendChild(spanLogo);
 
 const divlogoMenu = document.createElement('div');
 divlogoMenu.classList.add('logo-menu');
-divlogoMenu.appendChild(nav);
+divlogoMenu.append(divLogo, nav);
 
 const header = document.createElement('header');
 header.appendChild(divlogoMenu);
 
 document.body.insertAdjacentElement('afterbegin', header);
 
-document.body.insertBefore(nav, document.body.firstChild);
-
 const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '/css/navbar.css')
 
 document.head.appendChild(linkNavbar);
+
 
 
