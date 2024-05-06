@@ -1,5 +1,5 @@
 const ancoras = [
-    {'url': 'index.html', 'texto': 'Início'},
+    {'url': '/index.html', 'texto': 'Início'},
     {'url': '/html/triangulo.html', 'texto': 'Exerc. 1'},
     {'url': '/html/desconto.html', 'texto': 'Exerc. 2'},
     {'url': '/html/placar.html', 'texto': 'Exerc. 3'},
