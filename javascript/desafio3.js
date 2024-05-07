@@ -76,7 +76,7 @@ function converteTemperatura(escalaAtual, escalaConversao, temperatura) {
 
 document.querySelector('#btConverte').addEventListener('click', function () {
     const temperatura = document.querySelector('#temperatura').value;
-    const escalaAtual = document.querySelector('#escalas').value;
+    const escalaAtual = document.querySelector('#escalaConvertida').value;
     const escalaConversao = document.querySelector('#conversaoConvertida').value;
 
     const conversaoTemperatura = converteTemperatura(escalaAtual, escalaConversao, temperatura);
