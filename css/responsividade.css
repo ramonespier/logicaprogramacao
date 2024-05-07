@@ -1,0 +1,110 @@
+/* VARIAVEIS */
+
+[data-tema="dark"] {
+    --planofundo: #031123;
+    --cor-secao: #051D3B;
+    --cor-primaria-texto: aliceblue;
+    --cor-primaria-botao: #353535;
+    --cor-botao: #14000b;
+    --cor-secundaria-texto: #353535;
+    --cor-fundo-tags: dimgray;
+    --degrade: linear-gradient(to bottom right, crimson, #353535);
+    --fundo-scrollbar-track: #353535;
+    --fundo-scrollbar-thumb: crimson;
+    --titulo: #e6e8eb;
+    --shadow: #506075;
+    --borda-input: dimgray;
+    
+}
+
+[data-tema="light"] {
+    --planofundo: #c4d2e7;
+    --cor-secao: #6389c1;
+    --cor-primaria-texto: #353535;
+    --cor-primaria-botao: #ffffff;
+    --cor-botao: #ffffff;
+    --cor-fundo-tags: gray;
+    --degrade: linear-gradient(to bottom right, #3d85c6,
+    #c4daed);
+    --fundo-scrollbar-thumb: #3d85c6;
+    --fundo-scrollbar-track: #c4daed;
+    --titulo: #280017;
+    --shadow: #2F2A2C;
+    --borda-input: black;
+
+}
+/*
+    Estilos para outros tamanhos de telas:
+    Mobile -> até 400px
+    Tablet -> até 768px
+    TVs -> maior que 1920
+*/
+
+/* MOBILE */
+@media screen and (max-width: 430px) {
+
+    .secoes-principais {
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: var(--cor-secao);
+        box-shadow: 2px 2px 2px var(--shadow);
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 16px;
+    }
+
+    .logo>span {
+        width: 100%;
+        font-size: larger;
+    }
+
+    .sanduiche {
+        background-color: aliceblue;
+    }
+
+    .breadcrumbs li {
+        font-size: 11px;
+    }
+
+    .logo-menu a {
+        display: inline-flex;
+        height: 100%;
+        text-decoration: none;
+        color: var(--cor-primaria-texto);
+        background-color: var(--cor-secao);
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.2rem;
+        padding: 5px;
+        border-radius: 5px;
+        transition-duration: 350ms;
+        box-shadow: .5px .5px 4px var(--shadow);
+        cursor: pointer;
+    }
+
+    .secao-flex {
+    
+        width: 100%;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .secao-um,
+    #temperatura {
+        width: auto;
+        
+    
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+    
+}
+
+/* TVs */
+@media screen and (min-width: 1921px) {
+    
+}

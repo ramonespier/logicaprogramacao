@@ -37,9 +37,16 @@ function criaUlNav(ancoras) {
     return ul;
 }
 
+function sanduba() {
+
+}
+
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
 nav.appendChild(criaUlNav(ancoras));
+
+// const sanduiche = document.createElement('div')
+// sanduiche.classList.add('sanduiche');
 
 const spanLogo = document.createElement('span');
 spanLogo.innerHTML = 'Desafios e Exercícios';
@@ -61,7 +68,9 @@ const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '/css/navbar.css')
 
-document.head.appendChild(linkNavbar);
+document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar)
+
+document.querySelector('.menu-navegacao').classList.add('oculto')
 
 
 

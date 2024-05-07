@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-*{
+* {
     scroll-behavior: smooth;
 }
 
-:root{
+:root {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
 /* VARIAVEIS */
 
-[data-tema="dark"]{
+[data-tema="dark"] {
     --planofundo: #031123;
-    --cor-secao: #051D3B; 
+    --cor-secao: #051D3B;
     --cor-primaria-texto: aliceblue;
     --cor-primaria-botao: #353535;
     --cor-botao: #ffffff;
@@ -31,28 +31,36 @@
 
 [data-tema="light"] {
     --planofundo: #c4d2e7;
-    --cor-secao: #6389c1; 
+    --cor-secao: #6389c1;
     --cor-primaria-texto: #353535;
     --cor-primaria-botao: #ffffff;
     --cor-botao: #14000b;
     --cor-fundo-tags: gray;
-    --degrade: linear-gradient(to bottom right, #3d85c6, 
-    #c4daed);
+    --degrade: linear-gradient(to bottom right, #3d85c6,
+            #c4daed);
     --fundo-scrollbar-thumb: #3d85c6;
     --fundo-scrollbar-track: #c4daed;
     --titulo: #280017;
     --shadow: #2F2A2C;
     --borda-input: black;
 
-} 
+}
 
 /* FONTES */
 
-h1, h2, h3, h4, h5, h6, p, label{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
     color: var(--cor-primaria-texto);
 }
 
-input, button {
+input,
+button {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -63,27 +71,21 @@ body {
 
 /* SEÇÕES */
 
-.secoes-principais {
+/* .secoes-principais {
     font-family: 'Josefin Sans', sans-serif;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     background-color: var(--cor-secao);
     box-shadow: 2px 2px 2px var(--shadow);
     padding: 2rem;
     margin: 1rem;
-    width: 600px;
-    height: 200px;
-    border-radius: 16px;
-}
+    border-radius: 16px; */
 
-.secao-flex {
-    display: flex;
-    justify-content: center;
-}
 
-.resultado{
+/* .secao-flex {
+    /* display: flex; */
+    /* justify-content: center; */
+/* } */
+
+.resultado {
     color: aliceblue;
 }
 
@@ -94,25 +96,16 @@ body {
 
 /* BOTÃO TEMA */
 
-.oculto {
+.oculto li {
     display: none;
 }
 
 .troca-tema {
     margin-top: 7rem;
-    /* display: inline-flex; */
-    /* flex-direction: column-reverse; */
     position: fixed;
-    /* position: fixed; */
 }
 
 /* BOTAO CALCULO */
-
-.botoes {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-}
 
 .acao-positiva {
     background-color: rgb(0, 255, 0);
@@ -122,7 +115,7 @@ body {
     transition: .4s;
 }
 
-.acao-positiva:hover{
+.acao-positiva:hover {
     transform: scale(1.1);
 }
 
@@ -134,15 +127,17 @@ body {
     transition: .4s;
 }
 
-.acao-negativa:hover{
+.acao-negativa:hover {
     transform: scale(1.1);
 }
 
 /* INPUTS */
-.secao-um, #temperatura {
+.secao-um,
+#temperatura {
+    display: flex;
     border-radius: 16px;
     border: none;
-    padding: 8px;   
+    padding: 5px;
 }
 
 #escalaConvertida,
