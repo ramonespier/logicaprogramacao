@@ -98,6 +98,14 @@ body {
     display: none;
 }
 
+.troca-tema {
+    margin-top: 7rem;
+    /* display: inline-flex; */
+    /* flex-direction: column-reverse; */
+    position: fixed;
+    /* position: fixed; */
+}
+
 /* BOTAO CALCULO */
 
 .botoes {

@@ -9,87 +9,58 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/responsividade.css">
     <script src="/javascript/estilos.js"></script>
-    
+
     <title>Programas</title>
-   
+
 </head>
 
 <body>
-    
-    <!-- <header>
+    <div class="breadcrumbs">
 
-        <div class="logo-menu">
-            
-            <div class="logo">            
-                <span>Desafios e Exercícios</span>            
-            </div>
-            
-            <nav class="menu-navegação">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Desafios</a></li>
+            <li><a href="#">Exercícios</a></li>
+            <li><a href="#">Projetos</a></li>
+        </ul>
 
-                <ul>
+    </div>
 
-                    <li><a href="/html/placar.html">Exerc. 1</a></li>
-                    <li><a href="/html/triangulo.html">Exerc. 2</a></li>
-                    <li><a href="/html/desconto.html">Exerc. 3</a></li>
-                    <li><a href="/html/buscanome.html">Exerc. 4</a></li>
-                    <li><a href="/html/posto-de-gasolina.html">Exerc. 5</a></li>
-                    <li><a href="/html/produtos-com-desconto.html">Exerc. 6</a></li>
-                    <li><a href="/html/natal-mortal.html">Exerc. 7</a></li>
-                    
-                </ul>
-                
-            </nav>
-        </div> -->
-        
-        <div class="breadcrumbs">
-            
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Desafios</a></li>
-                <li><a href="#">Exercícios</a></li>
-                <li><a href="#">Projetos</a></li>
-            </ul>
-            
-        </div>
-        
-
-        
-    
     <main class="secao-flex">
-        
+
         <section class="secoes-principais">
-            
+
             <h2>Calculadora IMC</h2>
-            
+
             <form action="">
-                
+
                 <input type="text" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
-                
-                <input type="text" id="altura" class="secao-um" step="0.01"  min="0" max="3" placeholder="Altura">
-                
+
+                <input type="text" id="altura" class="secao-um" step="0.01" min="0" max="3" placeholder="Altura">
+
                 <div class="botoes">
-                    
+
                     <button type="button" id="btIMC" class="acao-positiva">Calcular IMC</button>
                     <button type="reset" id="limpar" class="acao-negativa">Limpar</button>
-                    
+
                 </div>
-                
+
             </form>
 
             <div class="resultado">
                 <div id="resultadoIMC"></div>
             </div>
-            
+
         </section>
-        
+
         <section class="secoes-principais">
-            
+
             <h2>Conversor de Temperatura</h2>
-            
+
             <form action="">
-                
+
                 <input type="text" id="temperatura" placeholder="Temperatura">
-                
+
                 <label for="escalaConvertida">De:</label>
                 <input list="escalas" id="escalaConvertida">
                 <datalist id="escalas" class="datalist">
@@ -97,20 +68,20 @@
                     <option value="F">Fahrenheit</option>
                     <option value="K">Kelvin</option>
                 </datalist>
-                
+
                 <label for="conversaoConvertida">Para:</label>
                 <input list="conversao" id="conversaoConvertida">
                 <datalist id="conversao" class="datalist">
                     <option value="C">Celcius</option>
                     <option value="F" selected>Fahrenheit</option>
-                    <option value="K">Kelvin</option>                    
+                    <option value="K">Kelvin</option>
                 </datalist>
-                
+
                 <div class="botoes">
-                    
+
                     <button type="button" id="btConverte" class="acao-positiva">Converter</button>
                     <button type="reset" id="limparConv" class="acao-negativa">Limpar</button>
-                    
+
                 </div>
 
             </form>
@@ -118,15 +89,16 @@
             <div class="resultado">
                 <div id="resultadoConversao"></div>
             </div>
-            
+
         </section>
-        
-    </main >
-            
+
+    </main>
+
     <div class="troca-tema">
-                
+
         <button type="button" id="tema-claro"><img src="../image/sol.png" alt="" width="40px"></button>
-        <button type="button" id="tema-escuro" class="oculto"><img src="../image/58f9fedb0ed2bdaf7c128331.png" alt="" width="40px"></button>
+        <button type="button" id="tema-escuro" class="oculto"><img src="../image/58f9fedb0ed2bdaf7c128331.png" alt=""
+                width="40px"></button>
 
     </div>
 
