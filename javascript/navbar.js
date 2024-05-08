@@ -35,7 +35,7 @@ function criaUlNav(ancoras) {
     });
 
     return ul;
-}
+};
 
 function sanduba() {
 
@@ -70,7 +70,8 @@ linkNavbar.setAttribute('href', '/css/navbar.css')
 
 document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar)
 
-document.querySelector('.menu-navegacao').classList.add('oculto')
+// mobal
+document.querySelector('ul').classList.add('oculto')
 
 
 

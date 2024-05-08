@@ -14,7 +14,7 @@
     --titulo: #e6e8eb;
     --shadow: #506075;
     --borda-input: dimgray;
-    
+
 }
 
 [data-tema="light"] {
@@ -25,7 +25,7 @@
     --cor-botao: #ffffff;
     --cor-fundo-tags: gray;
     --degrade: linear-gradient(to bottom right, #3d85c6,
-    #c4daed);
+            #c4daed);
     --fundo-scrollbar-thumb: #3d85c6;
     --fundo-scrollbar-track: #c4daed;
     --titulo: #280017;
@@ -33,6 +33,7 @@
     --borda-input: black;
 
 }
+
 /*
     Estilos para outros tamanhos de telas:
     Mobile -> até 400px
@@ -41,28 +42,26 @@
 */
 
 /* MOBILE */
-@media screen and (max-width: 430px) {
 
-    .secoes-principais {
-        font-family: 'Josefin Sans', sans-serif;
-        background-color: var(--cor-secao);
-        box-shadow: 2px 2px 2px var(--shadow);
-        padding: 2rem;
-        margin: 1rem;
-        border-radius: 16px;
-    }
+@media screen and (max-width: 450px) {
 
     .logo>span {
-        width: 100%;
-        font-size: larger;
+        display: inline-flex;
+        align-items: center;
+        color: aliceblue;
+        font-family: "Comfortaa", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        margin-inline-start: 1.5rem;
+        height: 100%;
+
     }
 
-    .sanduiche {
-        background-color: aliceblue;
-    }
-
-    .breadcrumbs li {
-        font-size: 11px;
+    .logo-menu {
+        display: flex;
+        background-color: var(--cor-secao);
+        height: 65px;
+        justify-content: space-between;
     }
 
     .logo-menu a {
@@ -70,7 +69,7 @@
         height: 100%;
         text-decoration: none;
         color: var(--cor-primaria-texto);
-        background-color: var(--cor-secao);
+        background-color: var(--cor-botao);
         font-family: "Josefin Sans", sans-serif;
         font-size: 1.2rem;
         padding: 5px;
@@ -80,31 +79,195 @@
         cursor: pointer;
     }
 
-    .secao-flex {
-    
+
+
+
+    /* MENU */
+
+    .menu-navegacao {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
+        height: 65px;
+        background-color: var(--cor-secao);
     }
 
-    .botoes {
+    .logo-menu ul {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        margin-inline-end: 10px;
+    }
+
+    .menu-navegacao h1 {
+        display: flex;
+        align-items: center;
+    }
+
+    /* SANDUBAS */
+    .oculto>li {
+        display: none;
+    }
+
+
+    .logo-menu a:hover {
+        transform: scale(1.1);
+        background-color: #28343c;
+        cursor: pointer;
+        font-weight: 300;
+    }
+
+
+    /* Farofa de pão */
+
+    .breadcrumbs {
+        height: 50px;
+        font-size: smaller;
+        
+    }
+
+    .breadcrumbs>ul {
+        height: 100%;
+        display: flex;
+        /* margin-inline-start: 100%; */
+    }
+
+    .breadcrumbs li {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+        content: "→";
+        color: aliceblue;
+    }
+
+    .breadcrumbs li:not(:last-child)>a {
+        color: aliceblue;
+    }
+
+    .breadcrumbs li:last-child>a {
+        background-color: #2a165d;
+        color: aliceblue;
+        padding: 8px;
+        border-radius: 8px;
+        margin-inline-start: 8px;
+    }
+
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .breadcrumbs li:last-child>a:hover {
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .breadcrumbs a {
+        display: inline-flex;
+        align-items: center;
+        /* height: 100%; */
+        padding: 0 1rem;
+        font-family: "Josefin Sans", sans-serif;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: aliceblue;
+    }
+
+    /* SEÇÃO */
+
+    .secao-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .secoes-principais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Josefin Sans', sans-serif;
+        background: var(--cor-secao);
+        box-shadow: 1px 1px 3px var(--shadow);
+        margin: 1rem;
+        width: 250px;
+        padding: 25px;
+        border-radius: 10px
+    }
+
+    .botoes-imc {
+        display: flex;
+        gap: 35px;
+        margin-top: 8px;
+    }
+
+    .peso-altura {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: 10px;
     }
 
     .secao-um,
     #temperatura {
-        width: auto;
-        
-    
+        display: flex;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+    }
+
+    /* BOTAO CALCULO */
+
+
+    .acao-positiva {
+        background-color: rgb(0, 255, 0);
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+        padding: 8px;
+        transition: .4s;
+    }
+
+    .acao-positiva:hover {
+        transform: scale(1.1);
+    }
+
+    .acao-negativa {
+        background-color: rgb(255, 0, 0);
+        border: none;
+        border-radius: 10px;
+        font-size: 12px;
+        padding: 8px;
+        transition: .4s;
+    }
+
+    .acao-negativa:hover {
+        transform: scale(1.1);
+    }
+
+    /* BOTÃO TEMA */
+
+    .oculto {
+        display: none;
+    }
+
+    .troca-tema {
+        margin-top: 5rem;
+        position: fixed;
     }
 }
 
+;
+
+
+
+
 /* TABLET */
-@media screen and (max-width: 768px) {
-    
-}
+@media screen and (max-width: 768px) {}
 
 /* TVs */
-@media screen and (min-width: 1921px) {
-    
-}
+@media screen and (min-width: 1921px) {}

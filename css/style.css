@@ -94,42 +94,9 @@ body {
 
 }
 
-/* BOTÃO TEMA */
 
-.oculto li {
-    display: none;
-}
 
-.troca-tema {
-    margin-top: 7rem;
-    position: fixed;
-}
 
-/* BOTAO CALCULO */
-
-.acao-positiva {
-    background-color: rgb(0, 255, 0);
-    border: none;
-    border-radius: 12px;
-    padding: 15px;
-    transition: .4s;
-}
-
-.acao-positiva:hover {
-    transform: scale(1.1);
-}
-
-.acao-negativa {
-    background-color: rgb(255, 0, 0);
-    border: none;
-    border-radius: 12px;
-    padding: 15px;
-    transition: .4s;
-}
-
-.acao-negativa:hover {
-    transform: scale(1.1);
-}
 
 /* INPUTS */
 .secao-um,

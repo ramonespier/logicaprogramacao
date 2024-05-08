@@ -30,13 +30,17 @@
 
             <form action="">
 
-                <input type="text" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
+                <div class="peso-altura">
 
-                <input type="text" id="altura" class="secao-um" step="0.01" min="0" max="3" placeholder="Altura">
+                    <input type="text" id="peso" class="secao-um" step="0.5" min="0" max="1000" placeholder="Peso">
 
-                <div class="botoes">
+                    <input type="text" id="altura" class="secao-um" step="0.01" min="0" max="3" placeholder="Altura">
 
-                    <button type="button" id="btIMC" class="acao-positiva">Calcular IMC</button>
+                </div>
+
+                <div class="botoes-imc">
+
+                    <button type="button" id="btIMC" class="acao-positiva">Calcular</button>
                     <button type="reset" id="limpar" class="acao-negativa">Limpar</button>
 
                 </div>
