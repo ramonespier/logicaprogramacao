@@ -60,7 +60,8 @@ label {
 }
 
 input,
-button {
+button,
+li {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -71,19 +72,24 @@ body {
 
 /* SEÇÕES */
 
+
+/* label {
+    margin-top: 10px;
+}  */
+
 /* .secoes-principais {
     font-family: 'Josefin Sans', sans-serif;
     background-color: var(--cor-secao);
     box-shadow: 2px 2px 2px var(--shadow);
     padding: 2rem;
     margin: 1rem;
-    border-radius: 16px; */
-
+    border-radius: 16px;
+} */
 
 /* .secao-flex {
-    /* display: flex; */
-    /* justify-content: center; */
-/* } */
+    display: flex;
+    justify-content: center;
+} */
 
 .resultado {
     color: aliceblue;
@@ -94,10 +100,6 @@ body {
 
 }
 
-
-
-
-
 /* INPUTS */
 .secao-um,
 #temperatura {
@@ -105,12 +107,6 @@ body {
     border-radius: 16px;
     border: none;
     padding: 5px;
+    margin-top: 3px;
 }
 
-#escalaConvertida,
-#conversaoConvertida {
-    border-radius: 16px;
-    border: var(--borda-input);
-    padding: 8px;
-    width: 5rem;
-}

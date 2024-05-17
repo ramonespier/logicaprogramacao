@@ -14,6 +14,8 @@
     --titulo: #e6e8eb;
     --shadow: #506075;
     --borda-input: dimgray;
+    --cor-borda: snow;
+    --hamburguer: #3d85c6;
 
 }
 
@@ -31,6 +33,8 @@
     --titulo: #280017;
     --shadow: #2F2A2C;
     --borda-input: black;
+    --cor-borda: black;
+    --hamburguer: snow;
 
 }
 
@@ -101,16 +105,14 @@
         margin-inline-end: 10px;
     }
 
+    .menu-navegacao {
+        display: none;
+    }
+
     .menu-navegacao h1 {
         display: flex;
         align-items: center;
     }
-
-    /* SANDUBAS */
-    .oculto>li {
-        display: none;
-    }
-
 
     .logo-menu a:hover {
         transform: scale(1.1);
@@ -119,13 +121,73 @@
         font-weight: 300;
     }
 
+    .menu-hamburguer {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .menu-hamburguer div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--hamburguer);
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    .menu {
+        display: none;
+        list-style-type: none;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        flex-direction: column;
+        background-color: var(--cor-secao);
+        box-shadow: 2px 2px 4px var(--shadow);
+        padding: 10px;
+        margin-top: 50px;
+        z-index: 999;
+        border: 1px solid snow;
+        transition: .8s;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        color: var(--cor-primaria-texto);
+        text-decoration: none;
+        background-color: var(--cor-secao);
+        cursor: pointer;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .menuActive :nth-child(1) {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    .menuActive :nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuActive :nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 
     /* Farofa de pão */
 
     .breadcrumbs {
         height: 50px;
         font-size: smaller;
-        
+
     }
 
     .breadcrumbs>ul {
@@ -175,10 +237,13 @@
         font-family: "Josefin Sans", sans-serif;
         text-decoration: none;
         text-transform: capitalize;
-        color: aliceblue;
     }
 
     /* SEÇÃO */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 
     .secao-flex {
         display: flex;
@@ -199,10 +264,13 @@
         border-radius: 10px
     }
 
-    .botoes-imc {
-        display: flex;
-        gap: 35px;
-        margin-top: 8px;
+    #escalaConvertida,
+    #conversaoConvertida {
+        border-radius: 16px;
+        border: var(--borda-input);
+        padding: 5px;
+
+
     }
 
     .peso-altura {
@@ -210,6 +278,13 @@
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
+    }
+
+    .temperatura-conversao {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
     }
 
     .secao-um,
@@ -221,7 +296,17 @@
     }
 
     /* BOTAO CALCULO */
+    .botoes-imc {
+        display: flex;
+        gap: 35px;
+        margin-top: 8px;
+    }
 
+    .botoes-Conversao {
+        display: flex;
+        gap: 35px;
+        margin-top: 8px;
+    }
 
     .acao-positiva {
         background-color: rgb(0, 255, 0);
@@ -256,18 +341,29 @@
     }
 
     .troca-tema {
-        margin-top: 5rem;
         position: fixed;
+        left: auto;
+        bottom: 20px;
+        position: fixed;
+        
+    }
+
+    #tema-claro,
+    #tema-escuro {
+        height: 50px;
+        border-radius: 2rem;
+        border: none;
+        background-color: var(--planofundo);
+    }
+
+    #tema-claro img,
+    #tema-escuro img {
+        border: none;
     }
 }
 
-;
+    /* TABLET */
+    @media screen and (max-width: 768px) {}
 
-
-
-
-/* TABLET */
-@media screen and (max-width: 768px) {}
-
-/* TVs */
-@media screen and (min-width: 1921px) {}
+    /* TVs */
+    @media screen and (min-width: 1921px) {}
