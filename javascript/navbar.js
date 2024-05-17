@@ -37,16 +37,9 @@ function criaUlNav(ancoras) {
     return ul;
 };
 
-function sanduba() {
-
-}
-
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
 nav.appendChild(criaUlNav(ancoras));
-
-// const sanduiche = document.createElement('div')
-// sanduiche.classList.add('sanduiche');
 
 const spanLogo = document.createElement('span');
 spanLogo.innerHTML = 'Desafios e Exercícios';
