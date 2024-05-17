@@ -11,6 +11,47 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+
+            <div class="logo-menu">
+
+                <div class="logo">
+                    <span>Desafios e exercícios</span>
+                </div>
+
+            </div>
+
+            <div class="menu-hamburguer">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="/html/triangulo.html">Exercício 1</a></li>
+                <li><a href="/html/desconto.html">Exercício 2</a></li>
+                <li><a href="/html/placar.html">Exercício 3</a></li>
+                <li><a href="/html/buscanome.html">Exercício 4</a></li>
+                <li><a href="/html/posto-de-gasolina.html">Exercício 5</a></li>
+                <li><a href="/html/produtos-com-desconto.html">Exercício 6</a></li>
+                <li><a href="/html/natal-mortal.html">Exercício 7</a></li>
+            </ul>
+
+        </nav>
+
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
     <div class="breadcrumbs">
 
         <ul>
@@ -59,25 +100,28 @@
 
             <form action="">
 
-                <input type="text" id="temperatura" placeholder="Temperatura">
+                <div class="temperatura-conversao">
 
-                <label for="escalaConvertida">De:</label>
-                <input list="escalas" id="escalaConvertida">
-                <datalist id="escalas" class="datalist">
-                    <option value="C" selected>Celcius</option>
-                    <option value="F">Fahrenheit</option>
-                    <option value="K">Kelvin</option>
-                </datalist>
+                    <input type="text" id="temperatura" placeholder="Temperatura">
+                    <label for="escalaConvertida">De:</label>
+                    <input list="escalas" id="escalaConvertida">
 
-                <label for="conversaoConvertida">Para:</label>
-                <input list="conversao" id="conversaoConvertida">
-                <datalist id="conversao" class="datalist">
-                    <option value="C">Celcius</option>
-                    <option value="F" selected>Fahrenheit</option>
-                    <option value="K">Kelvin</option>
-                </datalist>
-
-                <div class="botoes">
+                    <datalist id="escalas" class="datalist">
+                        <option value="C" selected>Celcius</option>
+                        <option value="F">Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </datalist>
+                    
+                    <label for="conversaoConvertida">Para:</label>
+                    <input list="conversao" id="conversaoConvertida">
+                    <datalist id="conversao" class="datalist">
+                        <option value="C">Celcius</option>
+                        <option value="F" selected>Fahrenheit</option>
+                        <option value="K">Kelvin</option>
+                    </datalist>
+                    
+                </div>
+                <div class="botoes-Conversao">
 
                     <button type="button" id="btConverte" class="acao-positiva">Converter</button>
                     <button type="reset" id="limparConv" class="acao-negativa">Limpar</button>
@@ -102,7 +146,8 @@
 
     </div>
 
-    <script src="/javascript/navbar.js"></script>
+    <!-- <script src="/javascript/navbar.js"></script> -->
+    <script src="/javascript/hamburguer.js"></script>
     <script src="/javascript/tema.js"></script>
     <script src="/javascript/desafio2.js"></script>
     <script src="/javascript/desafio3.js"></script>
