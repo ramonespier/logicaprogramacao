@@ -63,8 +63,7 @@ linkNavbar.setAttribute('href', '/css/navbar.css')
 
 document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar)
 
-// mobal
-document.querySelector('ul').classList.add('oculto')
+
 
 
 
